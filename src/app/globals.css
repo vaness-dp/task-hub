@@ -21,3 +21,9 @@ body {
 	--color-gray: #c6c6c6;
 	--color-gray-light: #f6f6f6;
 }
+
+@layer components {
+	.p-layout {
+		@apply px-4 py-16;
+	}
+}

@@ -1,12 +1,13 @@
 import type { PropsWithChildren } from 'react'
 
+import { Content } from './content/Content'
 import { Sidebar } from './sidebar/Sidebar'
 
 export default function Layout({ children }: PropsWithChildren<unknown>) {
 	return (
-		<main className="flex min-h-screen flex-col">
+		<main className="flex min-h-screen">
 			<Sidebar />
-			{children}
+			<Content>{children}</Content>
 		</main>
 	)
 }

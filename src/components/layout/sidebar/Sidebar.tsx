@@ -6,7 +6,7 @@ import { SIDEBAR_DATA } from './sidebar.data'
 
 export function Sidebar() {
 	return (
-		<aside className="px-4 py-14 whitespace-nowrap overflow-hidden bg-white w-60 min-h-screen">
+		<aside className="p-layout whitespace-nowrap overflow-hidden bg-white w-60 min-h-screen relative">
 			<SidebarHeader />
 			<SidebarMenu
 				title="Main Menu"
