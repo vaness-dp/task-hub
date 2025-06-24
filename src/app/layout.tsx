@@ -1,18 +1,28 @@
 import type { Metadata } from 'next'
-import { SUSE } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
 import { Providers } from '@/providers/Providers'
 
+import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/constants'
+
 import './globals.css'
 
-const SUSE_FONT = SUSE({
-	variable: '--font-suse',
-	subsets: ['latin']
+const POPPINS_FONT = Poppins({
+	variable: '--font-poppins',
+	subsets: ['latin'],
+	weight: ['300', '400', '500', '600', '700', '800', '900']
 })
 
 export const metadata: Metadata = {
-	title: 'TaskHub',
-	description: 'TaskHub is a task management tool that helps you manage your tasks and projects.'
+	icons: {
+		icon: '/images/favicon.svg',
+		shortcut: '/images/favicon.svg'
+	},
+	title: {
+		absolute: SITE_NAME,
+		template: `%s | ${SITE_NAME}`
+	},
+	description: SITE_DESCRIPTION
 }
 
 export default function RootLayout({
@@ -21,8 +31,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${SUSE_FONT.variable} antialiased`}>
+		<html
+			lang="en"
+			suppressHydrationWarning
+		>
+			<body className={`${POPPINS_FONT.variable} antialiased`}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>

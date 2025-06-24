@@ -1,21 +1,19 @@
-'use client'
-
-import { SidebarHeader } from './header/SidebarHeader'
-import { SidebarMenu } from './menu/SidebarMenu'
-import { SIDEBAR_DATA } from './sidebar.data'
+import { SidebarHeading } from './SidebarHeading'
+import { SidebarMenu } from './SidebarMenu'
+import { SidebarProfile } from './SidebarProfile'
+import { SidebarProjects } from './SidebarProjects'
 
 export function Sidebar() {
 	return (
-		<aside className="p-layout whitespace-nowrap overflow-hidden bg-white w-60 min-h-screen relative">
-			<SidebarHeader />
-			<SidebarMenu
-				title="Main Menu"
-				menu={SIDEBAR_DATA}
-			/>
-			<SidebarMenu
-				title="Projects"
-				menu={[]}
-			/>
+		<aside className="p-5 bg-white dark:bg-neutral-800">
+			<SidebarHeading title="Account" />
+			<SidebarProfile />
+
+			<SidebarHeading title="Main Menu" />
+			<SidebarMenu />
+
+			<SidebarHeading title="Projects" />
+			<SidebarProjects />
 		</aside>
 	)
 }

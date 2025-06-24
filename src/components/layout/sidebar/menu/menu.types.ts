@@ -1,7 +1,7 @@
 import type { LucideIcon } from 'lucide-react'
 
-export interface ISidebarItem {
-	name: string
+export interface IMenuItem {
 	icon: LucideIcon
-	link: string
+	label: string
+	href: string
 }
