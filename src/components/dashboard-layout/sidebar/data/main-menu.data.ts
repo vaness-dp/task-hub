@@ -21,7 +21,8 @@ export const MAIN_MENU: IMenuItem[] = [
 	{
 		icon: MessageCircleMore,
 		label: 'Messages',
-		href: Pages.MESSAGES
+		href: Pages.MESSAGES,
+		badge: 4
 	},
 	{
 		icon: ChartColumnBig,

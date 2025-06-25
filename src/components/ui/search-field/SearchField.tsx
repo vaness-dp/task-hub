@@ -8,17 +8,14 @@ interface Props {
 
 export function SearchField({ placeholder = 'Search something...', onChange, value }: Props) {
 	return (
-		<div className="flex items-center w-full max-w-sm px-4 py-2 bg-white dark:bg-neutral-800 rounded-full shadow-sm">
-			<Search
-				size={20}
-				className="text-neutral-500 mr-2"
-			/>
+		<div className="relative">
+			<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-400" />
 			<input
 				type="search"
 				placeholder={placeholder}
 				value={value}
 				onChange={e => onChange(e.target.value)}
-				className="w-full bg-transparent focus:outline-none text-sm placeholder:text-neutral-400 text-neutral-800 dark:text-white"
+				className="w-80 pl-11 pr-4 py-2.5 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-2xl text-sm text-[#2a2a2a] dark:text-[#f5f5f5] placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm"
 			/>
 		</div>
 	)

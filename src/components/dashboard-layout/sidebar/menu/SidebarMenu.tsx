@@ -9,9 +9,10 @@ import { MenuItem } from './MenuItem'
 
 export function SidebarMenu() {
 	const pathname = usePathname()
+
 	return (
-		<nav className="mb-10 mt-2.5">
-			<ul>
+		<nav className="mb-8">
+			<ul className="space-y-2">
 				{MAIN_MENU.map(menuItem => (
 					<MenuItem
 						key={menuItem.href}

@@ -7,6 +7,12 @@
 	--color-text-secondary: #f5f5f5;
 }
 
+@layer components {
+	.border-neutral {
+		@apply border-neutral-200 dark:border-neutral-700;
+	}
+}
+
 html {
 	font-size: 16px;
 }

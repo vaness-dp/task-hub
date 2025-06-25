@@ -2,13 +2,8 @@
 
 import type { PropsWithChildren } from 'react'
 
-import { Sidebar } from '@/components/layout/sidebar/Sidebar'
+import { DashboardLayout } from '@/components/dashboard-layout/DashboardLayout'
 
-export default function DashboardLayout({ children }: PropsWithChildren) {
-	return (
-		<div className="grid grid-cols-[250px_1fr] h-screen">
-			<Sidebar />
-			<main className="p-5">{children}</main>
-		</div>
-	)
+export default function Layout({ children }: PropsWithChildren<unknown>) {
+	return <DashboardLayout>{children}</DashboardLayout>
 }

@@ -1,7 +1,10 @@
+// ui/ThemeToggle.tsx (с анимацией)
 'use client'
 
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
 import { useTheme } from 'next-themes'
+
+// ui/ThemeToggle.tsx (с анимацией)
 
 export function ThemeToggle() {
 	const { theme, setTheme } = useTheme()
@@ -11,13 +14,23 @@ export function ThemeToggle() {
 	}
 
 	return (
-		<div className="fixed top-2.5 right-2.5 z-50">
-			<button
-				onClick={toggleTheme}
-				className="p-2 rounded-full backdrop-blur-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-all border border-neutral-200/10  shadow-sm"
-			>
-				{theme === 'dark' ? <SunIcon className="w-4 h-4" /> : <MoonIcon className="w-4 h-4" />}
-			</button>
-		</div>
+		<button
+			onClick={toggleTheme}
+			className="relative w-10 h-10 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-2xl flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-all shadow-sm overflow-hidden"
+			aria-label="Toggle theme"
+		>
+			<div className="relative w-4 h-4">
+				<SunIcon
+					className={`absolute inset-0 w-4 h-4 text-amber-500 transition-all duration-300 ${
+						theme === 'dark' ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'
+					}`}
+				/>
+				<MoonIcon
+					className={`absolute inset-0 w-4 h-4 text-blue-500 transition-all duration-300 ${
+						theme === 'dark' ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'
+					}`}
+				/>
+			</div>
+		</button>
 	)
 }
