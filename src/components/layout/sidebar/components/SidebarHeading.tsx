@@ -13,7 +13,7 @@ export function SidebarHeading({ title }: Props) {
 	const isCollapsed = useAtomValue(isCollapsedAtom)
 	return (
 		<m.div
-			className="font-medium mb-1.5 text-neutral-400 opacity-70 dark:text-white"
+			className="font-medium text-neutral-400 opacity-70 dark:text-white"
 			{...collapseAnimation(isCollapsed)}
 		>
 			{title}

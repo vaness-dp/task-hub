@@ -11,12 +11,12 @@ export function ThemeToggle() {
 	}
 
 	return (
-		<div className="fixed bottom-8 right-8 z-50">
+		<div className="fixed top-2.5 right-2.5 z-50">
 			<button
 				onClick={toggleTheme}
-				className="p-2 rounded-full dark:text-white text-neutral-800 bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors"
+				className="p-2 rounded-full backdrop-blur-sm text-white bg-indigo-500 hover:bg-indigo-600 transition-all border border-neutral-200/10  shadow-sm"
 			>
-				{theme === 'dark' ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
+				{theme === 'dark' ? <SunIcon className="w-4 h-4" /> : <MoonIcon className="w-4 h-4" />}
 			</button>
 		</div>
 	)

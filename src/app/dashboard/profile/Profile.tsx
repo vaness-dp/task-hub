@@ -1,7 +1,15 @@
+import Image from 'next/image'
+
 export function Profile() {
 	return (
-		<div className="">
-			<div className="w-8 h-8 bg-primary rounded-full shrink-0" />
+		<div>
+			<Image
+				src="/images/me.jpg"
+				alt="photo of me"
+				width={37}
+				height={37}
+				className="rounded-full shrink-0"
+			/>
 		</div>
 	)
 }

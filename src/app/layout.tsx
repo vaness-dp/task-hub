@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { SUSE } from 'next/font/google'
 
 import { Providers } from '@/providers/Providers'
 
@@ -7,10 +7,10 @@ import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/constants'
 
 import './globals.css'
 
-const POPPINS_FONT = Poppins({
-	variable: '--font-poppins',
+const SUSE_FONT = SUSE({
+	variable: '--font-suse',
 	subsets: ['latin'],
-	weight: ['300', '400', '500', '600', '700', '800', '900']
+	weight: ['300', '400', '500', '600', '700', '800']
 })
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({
 			lang="en"
 			suppressHydrationWarning
 		>
-			<body className={`${POPPINS_FONT.variable} antialiased`}>
+			<body className={`${SUSE_FONT.variable} antialiased`}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>

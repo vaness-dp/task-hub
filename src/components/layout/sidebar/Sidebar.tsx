@@ -3,6 +3,7 @@
 import * as m from 'framer-motion/m'
 import { useAtom } from 'jotai'
 import { PanelLeftClose, PanelLeftOpen } from 'lucide-react'
+import dynamic from 'next/dynamic'
 
 import { isCollapsedAtom } from '@/store/sidebar.store'
 
@@ -10,6 +11,10 @@ import { SidebarProjects } from './SidebarProjects'
 import { SidebarHeading } from './components/SidebarHeading'
 import { SidebarToggle } from './components/SidebarToggle'
 import { SidebarMenu } from './menu/SidebarMenu'
+
+const DynamicThemeToggle = dynamic(() => import('@/ui/ThemeToggle').then(mod => mod.ThemeToggle), {
+	ssr: false
+})
 
 export function Sidebar() {
 	const [isCollapsed, setIsCollapsed] = useAtom(isCollapsedAtom)
@@ -39,6 +44,8 @@ export function Sidebar() {
 
 			<SidebarHeading title="Projects" />
 			<SidebarProjects />
+
+			<DynamicThemeToggle />
 		</m.aside>
 	)
 }
