@@ -6,9 +6,9 @@ import { PanelLeftClose, PanelLeftOpen } from 'lucide-react'
 
 import { isCollapsedAtom } from '@/store/sidebar.store'
 
-import { SidebarHeading } from './SidebarHeading'
 import { SidebarProjects } from './SidebarProjects'
-import { SidebarToggle } from './SidebarToggle'
+import { SidebarHeading } from './components/SidebarHeading'
+import { SidebarToggle } from './components/SidebarToggle'
 import { SidebarMenu } from './menu/SidebarMenu'
 
 export function Sidebar() {

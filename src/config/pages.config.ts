@@ -8,4 +8,8 @@ export class Pages {
 	static SCHEDULE = `${Pages.BASE}/schedule`
 	static REPORT = `${Pages.BASE}/report`
 	static SETTINGS = `${Pages.BASE}/settings`
+
+	static AUTH = '/auth'
+	static LOGIN = `${Pages.AUTH}/login`
+	static REGISTER = `${Pages.AUTH}/register`
 }
