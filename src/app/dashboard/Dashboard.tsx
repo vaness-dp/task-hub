@@ -1,20 +1,10 @@
-// components/Dashboard.tsx
 'use client'
 
-import { Chat } from '@/components/dashboard-layout/chat/Chat'
-import { Header } from '@/components/dashboard-layout/header/Header'
+import { Chat } from '@/components/dashboard/chat/Chat'
+import { Header } from '@/components/dashboard/header/Header'
 
-import { ProjectStats } from './project-stats/ProjectStats'
-
-// components/Dashboard.tsx
-
-// components/Dashboard.tsx
-
-// components/Dashboard.tsx
-
-// components/Dashboard.tsx
-
-// components/Dashboard.tsx
+import { ProjectStats } from '../../components/dashboard/project-stats/ProjectStats'
+import { ProjectsStatistic } from '../../components/dashboard/projects-statistic/ProjectsStatistic'
 
 export function Dashboard() {
 	return (
@@ -23,23 +13,21 @@ export function Dashboard() {
 			<div className="p-6 overflow-y-auto">
 				<Header />
 
-				<div className="grid grid-cols-[300px_1fr] gap-6">
-					{/* Левая колонка */}
-					<div className="space-y-6">
+				{/* Контейнер для карточек и статистики */}
+				<div className="dashboard-grid">
+					<div className="project-stats-container">
 						<ProjectStats />
 					</div>
 
-					{/* <div className="space-y-6">
+					<div className="projects-statistic">
 						<ProjectsStatistic />
+					</div>
 
-						<LastTasks />
-
-						<TodayTasks />
-					</div> */}
+					{/* TODO: Last Tasks */}
+					{/* TODO: Today's Tasks */}
 				</div>
 			</div>
 
-			{/* Чат */}
 			<Chat />
 		</div>
 	)

@@ -15,7 +15,7 @@ export function SearchField({ placeholder = 'Search something...', onChange, val
 				placeholder={placeholder}
 				value={value}
 				onChange={e => onChange(e.target.value)}
-				className="w-80 pl-11 pr-4 py-2.5 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-2xl text-sm text-[#2a2a2a] dark:text-[#f5f5f5] placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm"
+				className="w-80 pl-11 pr-4 py-2.5 bg-white dark:bg-neutral-800 border border-neutral rounded-2xl text-sm text-primary-content placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-sm"
 			/>
 		</div>
 	)

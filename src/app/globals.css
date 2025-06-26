@@ -3,16 +3,114 @@
 
 @theme {
 	--color-primary: #806df2;
-	--color-text: #2a2a2a;
-	--color-text-secondary: #f5f5f5;
 }
 
-@layer components {
-	.border-neutral {
-		@apply border-neutral-200 dark:border-neutral-700;
-	}
+/* Border */
+.border-neutral {
+	@apply border-neutral-200 dark:border-neutral-700;
 }
 
+/* Dashboard */
+.dashboard-grid {
+	@apply grid grid-cols-[300px_1fr] grid-rows-[1fr] items-stretch gap-6;
+}
+
+/* Project Stats */
+.project-stats-container {
+	@apply flex flex-col gap-4 h-full;
+}
+
+/* Projects Statistic */
+.projects-statistic {
+	@apply flex flex-col h-full;
+}
+
+/* Buttons */
+
+.btn-icon {
+	@apply w-9 h-9 bg-neutral-100 dark:bg-neutral-700 rounded-xl flex items-center justify-center hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors;
+}
+
+.btn-icon-sm {
+	@apply w-8 h-8 bg-neutral-100 dark:bg-neutral-700 rounded-xl flex items-center justify-center hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors;
+}
+
+.btn-icon-lg {
+	@apply w-8 h-8 bg-neutral-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors;
+}
+
+/* Inputs */
+.input {
+	@apply w-full px-4 py-3 bg-white dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-2xl text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none shadow-sm;
+}
+
+.input-sm {
+	@apply w-full px-3 py-2 bg-white dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-2xl text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none shadow-sm;
+}
+
+.input-messages-header {
+	@apply w-full pl-10 pr-4 py-2.5 bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-xl text-sm text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+/* Text */
+.text-primary-content {
+	@apply text-neutral-900 dark:text-neutral-100;
+}
+
+.text-secondary-content {
+	@apply text-neutral-500 dark:text-neutral-400;
+}
+
+/* Avatar */
+
+.avatar {
+	@apply w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center;
+}
+
+/* Badges */
+.badge {
+	@apply absolute right-3 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full text-xs font-medium min-w-[20px] text-center shadow-sm transition-all;
+}
+
+.badge-active {
+	@apply bg-white text-primary;
+}
+
+.badge-normal {
+	@apply bg-primary text-white;
+}
+
+/* Message Bubbles */
+.message-bubble {
+	@apply px-4 py-3 rounded-2xl max-w-full;
+}
+
+.message-bubble-own {
+	@apply bg-primary text-white rounded-br-md;
+}
+
+/* !!!!!! */
+.message-bubble-other {
+	@apply bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 rounded-bl-md shadow-sm border border-neutral-200 dark:border-neutral-600;
+}
+
+/* Auth */
+
+.auth-background-right {
+	@apply absolute right-10 bottom-20 w-24 h-24 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 rounded-2xl transform -rotate-12;
+}
+
+.auth-background-left {
+	@apply absolute left-10 top-20 w-32 h-32 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 rounded-2xl transform rotate-12;
+}
+
+/* Icons */
+
+.icon {
+	@apply w-4 h-4 text-neutral-600 dark:text-neutral-300;
+}
+
+/* Base Styles */
 html {
 	font-size: 16px;
 }
@@ -23,12 +121,11 @@ body {
 }
 
 body {
-	@apply bg-gradient-to-t from-[#f3eeff] to-[#f6f5ff] dark:from-[#1a1a1a] dark:to-[#121212] text-[#2a2a2a] dark:text-[#f5f5f5];
-
+	@apply bg-gradient-to-t from-[#f3eeff] to-[#f6f5ff] dark:from-[#1a1a1a] dark:to-[#121212] text-neutral-900 dark:text-neutral-100;
 	min-width: 320px;
 	min-height: 100vh;
 }
 
 button {
-	cursor: pointer;
+	@apply cursor-pointer;
 }

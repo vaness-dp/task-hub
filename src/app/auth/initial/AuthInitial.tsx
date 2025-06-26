@@ -35,7 +35,7 @@ export function AuthInitial() {
 			</div>
 
 			<div className="text-center">
-				<button className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors">
+				<button className="text-sm text-secondary-content hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors">
 					Stay logged out
 				</button>
 			</div>

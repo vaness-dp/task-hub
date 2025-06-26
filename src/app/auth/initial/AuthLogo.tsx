@@ -1,4 +1,3 @@
-// components/auth/AuthLogo.tsx
 import { Calendar, CheckCircle, Users } from 'lucide-react'
 
 export function AuthLogo() {
@@ -21,10 +20,8 @@ export function AuthLogo() {
 					</div>
 
 					<div className="text-center">
-						<div className="text-lg font-bold text-text dark:text-text-secondary">Task Hub</div>
-						<div className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
-							Project Management
-						</div>
+						<div className="text-lg font-bold text-primary-content">Task Hub</div>
+						<div className="text-xs text-secondary-content font-medium">Project Management</div>
 					</div>
 				</div>
 			</div>

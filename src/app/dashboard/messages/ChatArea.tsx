@@ -1,6 +1,6 @@
-import { ChatHeader } from './ChatHeader'
-import { ChatInput } from './ChatInput'
-import { ChatMessages } from './ChatMessages'
+import { ChatInput } from '@/components/dashboard/chat/ChatInput'
+import { ChatHeader } from '@/components/dashboard/chat/chat-header/ChatHeader'
+import { ChatMessages } from '@/components/dashboard/chat/chat-messages/ChatMessages'
 
 interface ChatAreaProps {
 	chatId: string

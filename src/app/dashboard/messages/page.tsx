@@ -1,5 +1,5 @@
-import { MessagesContainer } from './MessagesContainer'
+import { Messages } from './Messages'
 
 export default function MessagesPage() {
-	return <MessagesContainer />
+	return <Messages />
 }

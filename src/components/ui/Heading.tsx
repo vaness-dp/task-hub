@@ -1,3 +1,4 @@
+import cn from 'clsx'
 import type { ReactNode } from 'react'
 
 interface Props {
@@ -7,8 +8,6 @@ interface Props {
 
 export function Heading({ children, className = '' }: Props) {
 	return (
-		<h1 className={`text-2xl font-semibold text-[#2a2a2a] dark:text-[#f5f5f5] ${className}`}>
-			{children}
-		</h1>
+		<h1 className={cn('text-2xl font-semibold text-primary-content', className)}>{children}</h1>
 	)
 }
