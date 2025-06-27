@@ -5,6 +5,37 @@
 	--color-primary: #806df2;
 }
 
+@keyframes blob {
+	0% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	33% {
+		transform: translate(30px, -50px) scale(1.1);
+	}
+	66% {
+		transform: translate(-20px, 20px) scale(0.9);
+	}
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+}
+
+.animate-blob {
+	animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+	animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+	animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+	animation-delay: 6s;
+}
+
 /* Border */
 .border-neutral {
 	@apply border-neutral-200 dark:border-neutral-700;
@@ -12,17 +43,36 @@
 
 /* Dashboard */
 .dashboard-grid {
-	@apply grid grid-cols-[300px_1fr] grid-rows-[1fr] items-stretch gap-6;
+	@apply grid grid-cols-[325px_1fr] grid-rows-[1fr] items-stretch gap-6;
 }
 
 /* Project Stats */
+
 .project-stats-container {
-	@apply flex flex-col gap-4 h-full;
+	@apply grid grid-cols-[1fr] gap-6;
+	grid-column: 1;
+	grid-row: 1;
 }
 
 /* Projects Statistic */
 .projects-statistic {
-	@apply flex flex-col h-full;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* Last Tasks */
+
+.last-tasks {
+	grid-column: 1 / -1;
+	grid-row: 2;
+}
+
+/* Today Tasks */
+
+.today-tasks {
+	grid-column: 1 / -1;
+	grid-row: 3;
+	min-height: 600px;
 }
 
 /* Buttons */
@@ -89,21 +139,9 @@
 	@apply bg-primary text-white rounded-br-md;
 }
 
-/* !!!!!! */
 .message-bubble-other {
 	@apply bg-white dark:bg-neutral-700 text-neutral-900 dark:text-neutral-100 rounded-bl-md shadow-sm border border-neutral-200 dark:border-neutral-600;
 }
-
-/* Auth */
-
-.auth-background-right {
-	@apply absolute right-10 bottom-20 w-24 h-24 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 rounded-2xl transform -rotate-12;
-}
-
-.auth-background-left {
-	@apply absolute left-10 top-20 w-32 h-32 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 rounded-2xl transform rotate-12;
-}
-
 /* Icons */
 
 .icon {

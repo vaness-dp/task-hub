@@ -17,15 +17,29 @@ export function Button({
 	type = 'button',
 	...props
 }: Props) {
-	const baseClasses = 'w-full py-3 font-medium rounded-full transition-colors block text-center'
+	const baseClasses =
+		'w-full py-3 font-medium rounded-2xl block text-center relative overflow-hidden transition-all duration-150 ease-out origin-center hover:scale-[1.02] active:scale-[0.98]'
 
 	const variantClasses = {
-		primary: 'bg-primary text-white hover:bg-primary/90 disabled:bg-primary/50',
+		primary:
+			'bg-primary text-white hover:bg-primary/90 disabled:bg-primary/50 shadow-lg hover:shadow-xl',
 		secondary:
-			'bg-transparent border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700'
+			'backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/30 dark:border-white/20 text-gray-900 dark:text-white hover:bg-white/20 dark:hover:bg-white/10 shadow-lg hover:shadow-xl'
 	}
 
 	const className = `${baseClasses} ${variantClasses[variant]} ${customClassName || ''}`
+
+	const ButtonContent = ({ children }: { children: ReactNode }) => (
+		<>
+			{variant === 'secondary' && (
+				<>
+					<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl" />
+					<div className="absolute inset-[1px] border border-white/40 dark:border-white/30 rounded-2xl pointer-events-none" />
+				</>
+			)}
+			<span className="relative z-10">{children}</span>
+		</>
+	)
 
 	if (href) {
 		return (
@@ -33,7 +47,7 @@ export function Button({
 				href={href}
 				className={className}
 			>
-				{children}
+				<ButtonContent>{children}</ButtonContent>
 			</Link>
 		)
 	}
@@ -45,7 +59,7 @@ export function Button({
 			className={className}
 			{...props}
 		>
-			{children}
+			<ButtonContent>{children}</ButtonContent>
 		</button>
 	)
 }

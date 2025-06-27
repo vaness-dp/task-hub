@@ -2,18 +2,17 @@
 
 import { Chat } from '@/components/dashboard/chat/Chat'
 import { Header } from '@/components/dashboard/header/Header'
-
-import { ProjectStats } from '../../components/dashboard/project-stats/ProjectStats'
-import { ProjectsStatistic } from '../../components/dashboard/projects-statistic/ProjectsStatistic'
+import { ProjectStats } from '@/components/dashboard/project-stats/ProjectStats'
+import { ProjectsStatistic } from '@/components/dashboard/projects-statistic/ProjectsStatistic'
+import { LastTasks } from '@/components/dashboard/tasks/last-tasks/LastTasks'
+import { MOCK_LAST_TASKS } from '@/components/dashboard/tasks/last-tasks/last-tasks.data'
 
 export function Dashboard() {
 	return (
 		<div className="grid grid-cols-[1fr_370px] h-screen overflow-hidden">
-			{/* Основная область */}
 			<div className="p-6 overflow-y-auto">
 				<Header />
 
-				{/* Контейнер для карточек и статистики */}
 				<div className="dashboard-grid">
 					<div className="project-stats-container">
 						<ProjectStats />
@@ -23,8 +22,13 @@ export function Dashboard() {
 						<ProjectsStatistic />
 					</div>
 
-					{/* TODO: Last Tasks */}
-					{/* TODO: Today's Tasks */}
+					<div className="last-tasks">
+						<LastTasks tasks={MOCK_LAST_TASKS} />
+					</div>
+
+					{/* <div className="today-tasks">
+						<TodayTasks tasks={MOCK_TODAY_TASKS} />
+					</div> */}
 				</div>
 			</div>
 

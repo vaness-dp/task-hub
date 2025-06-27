@@ -28,7 +28,11 @@ export function Field({
 
 	return (
 		<div>
-			<div className="relative">
+			<div className="relative overflow-hidden rounded-2xl">
+				{/* Glass effects for input */}
+				<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl pointer-events-none" />
+				<div className="absolute inset-[1px] border border-white/40 dark:border-white/30 rounded-2xl pointer-events-none" />
+
 				<input
 					type={inputType}
 					placeholder={placeholder}
@@ -40,17 +44,23 @@ export function Field({
 					{...registration}
 					{...props}
 				/>
+
 				{type === 'password' && onTogglePassword && (
 					<button
 						type="button"
 						onClick={onTogglePassword}
-						className="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 transition-colors"
+						className="absolute right-3 top-1/2 transform -translate-y-1/2 z-20 p-1 rounded-lg backdrop-blur-sm bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-200"
 					>
-						{showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+						{showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
 					</button>
 				)}
 			</div>
-			{hasError && error && <div className="text-red-500 text-sm mt-1">{error}</div>}
+
+			{hasError && error && (
+				<div className="text-red-400 dark:text-red-300 text-sm mt-2 px-3 py-2 backdrop-blur-sm bg-red-50/20 dark:bg-red-500/10 border border-red-200/30 dark:border-red-400/20 rounded-xl">
+					{error}
+				</div>
+			)}
 		</div>
 	)
 }

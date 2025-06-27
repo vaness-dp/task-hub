@@ -24,12 +24,13 @@ export function AuthForm({ isLogin }: { isLogin: boolean }) {
 	} = useForm<IAuthForm>({
 		mode: 'onChange'
 	})
+
 	return (
 		<form
 			onSubmit={handleSubmit(data => console.log(data))}
 			className="space-y-4"
 		>
-			<>
+			<div className="space-y-4">
 				<Field
 					type="email"
 					registration={register('email', { required: 'Email is required!' })}
@@ -60,9 +61,9 @@ export function AuthForm({ isLogin }: { isLogin: boolean }) {
 						placeholder="Confirm your password"
 					/>
 				)}
-			</>
+			</div>
 
-			<div className="pt-2">
+			<div className="pt-4">
 				<Button
 					variant="primary"
 					type="submit"

@@ -1,41 +1,37 @@
 'use client'
 
-import { ChevronDown } from 'lucide-react'
-import { useState } from 'react'
+import { useProjectsStatistic } from '@/hooks/useProjectsStatistic'
 
-import { ProjectsChart } from './ProjectsChart'
-import { mockChartData } from './projects-statistic.data'
+import { ProjectsStatisticHeader } from './ProjectsStatisticHeader'
+import { ProjectsChart } from './projects-chart/ProjectsChart'
 
-type Period = 'Monthly' | 'Yearly'
+// TODO: вынести декор и эффекты в отдельный компонент
 
 export function ProjectsStatistic() {
-	const [selectedPeriod, setSelectedPeriod] = useState<Period>('Yearly')
+	const { selectedPeriod, setSelectedPeriod, data } = useProjectsStatistic()
 
 	return (
-		<div className="bg-white dark:bg-neutral-800 rounded-3xl p-6 shadow-lg border border-neutral flex flex-col h-full">
-			{/* Заголовок с переключателем */}
-			<div className="flex items-center justify-between mb-6 flex-shrink-0">
-				<h3 className="text-lg font-semibold text-primary-content">Projects Statistic</h3>
+		<div className="backdrop-blur-xl bg-white/60 dark:bg-white/5 rounded-3xl p-6 shadow-lg border border-white/30 dark:border-white/10 flex flex-col h-full relative overflow-hidden">
+			{/* Effects */}
+			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 dark:from-white/8 dark:to-transparent rounded-3xl" />
+			<div className="absolute inset-[1px] border border-white/40 rounded-3xl pointer-events-none dark:border-transparent" />
 
-				<div className="relative">
-					<select
-						value={selectedPeriod}
-						onChange={e => setSelectedPeriod(e.target.value as Period)}
-						className="appearance-none bg-neutral-50 dark:bg-neutral-700 border border-neutral-200 dark:border-neutral-600 rounded-xl px-4 py-2 pr-10 text-sm text-primary-content focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer transition-all"
-					>
-						<option value="Monthly">Monthly</option>
-						<option value="Yearly">Yearly</option>
-					</select>
-					<ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-neutral-400 pointer-events-none" />
-				</div>
-			</div>
+			{/* Decorative elements */}
+			<div className="absolute top-4 right-4 w-3 h-3 bg-white/15 dark:bg-white/10 rounded-full" />
+			<div className="absolute bottom-4 left-4 w-2 h-2 bg-white/12 dark:bg-white/8 rounded-full" />
 
-			{/* График - занимает оставшееся место */}
-			<div className="flex-1 min-h-0">
-				<ProjectsChart
-					data={mockChartData[selectedPeriod]}
-					period={selectedPeriod}
+			<div className="relative z-10 flex flex-col h-full">
+				<ProjectsStatisticHeader
+					selectedPeriod={selectedPeriod}
+					onPeriodChange={setSelectedPeriod}
 				/>
+
+				<div className="flex-1 min-h-0">
+					<ProjectsChart
+						data={data}
+						period={selectedPeriod}
+					/>
+				</div>
 			</div>
 		</div>
 	)
