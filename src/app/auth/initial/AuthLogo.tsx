@@ -7,7 +7,6 @@ export function AuthLogo() {
 			<div className="w-full h-32 relative overflow-hidden rounded-2xl backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10">
 				{/* Inner glow */}
 				<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 dark:from-white/8 dark:to-transparent rounded-2xl" />
-				<div className="absolute inset-[1px] border border-white/30 dark:border-white/20 rounded-2xl pointer-events-none" />
 
 				{/* Decorative elements */}
 				<div className="absolute top-4 right-4 w-8 h-8 backdrop-blur-sm bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-lg rotate-12 flex items-center justify-center">

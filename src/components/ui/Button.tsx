@@ -34,7 +34,6 @@ export function Button({
 			{variant === 'secondary' && (
 				<>
 					<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl" />
-					<div className="absolute inset-[1px] border border-white/40 dark:border-white/30 rounded-2xl pointer-events-none" />
 				</>
 			)}
 			<span className="relative z-10">{children}</span>
