@@ -27,13 +27,17 @@ export function ChatInput({ isSmall }: Props) {
 	return (
 		<div
 			className={twMerge(
-				'p-4 border-t border-neutral bg-white/50 dark:bg-neutral-800/50 backdrop-blur-sm',
+				'p-4 border-t border-white/30 dark:border-white/10 backdrop-blur-xl bg-white/40 dark:bg-white/5 relative overflow-hidden',
 				!isSmall && 'p-6'
 			)}
 		>
+			{/* Effects */}
+			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 dark:from-white/8 dark:to-transparent" />
+			<div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent" />
+
 			<form
 				onSubmit={handleSubmit}
-				className="flex items-end space-x-3"
+				className="flex items-end space-x-3 relative z-10"
 			>
 				{/* Button actions */}
 				<div className="flex space-x-2">
