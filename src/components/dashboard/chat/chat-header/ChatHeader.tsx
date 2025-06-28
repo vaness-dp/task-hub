@@ -19,13 +19,13 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 	return (
 		<div
 			className={twMerge(
-				'p-6 border-b border-white/30 dark:border-white/10 backdrop-blur-xl bg-white/20 dark:bg-white/3 relative overflow-hidden',
+				'p-6 border-b border-gray-200 dark:border-white/10 backdrop-blur-xl bg-white/40 dark:bg-white/3 relative overflow-hidden',
 				isSmall && 'p-4'
 			)}
 		>
 			{/* Effects */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-white/8 dark:from-white/5 dark:to-transparent" />
-			<div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/40 dark:via-white/20 to-transparent" />
+			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/12 dark:from-white/5 dark:to-transparent" />
+			<div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/20 to-transparent" />
 
 			<div className="flex items-center justify-between relative z-10">
 				{/* Chat info */}
@@ -33,17 +33,18 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 					<div className="relative">
 						<div
 							className={twMerge(
-								'w-12 h-12 backdrop-blur-sm bg-white/60 dark:bg-white/20 border border-white/30 dark:border-white/20 rounded-2xl flex items-center justify-center text-lg relative overflow-hidden',
+								'w-12 h-12 backdrop-blur-sm bg-white/80 dark:bg-white/20 border border-gray-200 dark:border-white/20 rounded-2xl flex items-center justify-center text-lg relative overflow-hidden shadow-sm',
 								isSmall && 'w-10 h-10'
 							)}
 						>
-							<div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/10 rounded-2xl" />
+							<div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-white/20 dark:from-white/30 dark:to-white/10 rounded-2xl" />
+							<div className="absolute inset-[1px] border border-white/60 rounded-2xl pointer-events-none dark:border-transparent" />
 							<span className="relative z-10">{chat.avatar}</span>
 						</div>
 						{chat.online && (
 							<div
 								className={twMerge(
-									'absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white/50 dark:border-black/30',
+									'absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-sm',
 									isSmall && 'w-3 h-3'
 								)}
 							/>
