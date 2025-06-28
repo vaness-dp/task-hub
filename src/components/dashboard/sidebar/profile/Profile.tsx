@@ -39,7 +39,7 @@ export function Profile({ user }: Props) {
 				<div className="flex items-center space-x-3 p-3 relative z-10">
 					{/* Avatar */}
 					<div className="relative">
-						<div className="avatar">
+						<div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
 							{MOCK_USER_DATA.avatar ? (
 								<span className="text-lg">{MOCK_USER_DATA.avatar}</span>
 							) : (

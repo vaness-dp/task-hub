@@ -33,8 +33,8 @@ export function AuthLogo() {
 					</div>
 
 					<div className="text-center">
-						<div className="text-lg font-bold text-primary-content dark:text-white">Task Hub</div>
-						<div className="text-xs text-secondary-content dark:text-gray-400 font-medium">
+						<div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">Task Hub</div>
+						<div className="text-xs text-neutral-500 dark:text-gray-400 font-medium">
 							Project Management
 						</div>
 					</div>
