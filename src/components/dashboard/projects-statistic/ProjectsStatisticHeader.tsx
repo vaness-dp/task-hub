@@ -1,5 +1,7 @@
 import { ChevronDown } from 'lucide-react'
 
+import { InnerGlow } from '@/ui/glass/InnerGlow'
+
 import type { Period } from '@/hooks/useProjectsStatistic'
 
 interface Props {
@@ -25,7 +27,7 @@ export function ProjectsStatisticHeader({ selectedPeriod, onPeriodChange }: Prop
 				</select>
 
 				{/* Effects */}
-				<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl pointer-events-none" />
+				<InnerGlow className="rounded-2xl pointer-events-none" />
 				<div className="absolute inset-[1px] border border-white/40 rounded-2xl pointer-events-none dark:border-transparent" />
 
 				<ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-gray-400 pointer-events-none z-10" />

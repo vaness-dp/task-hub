@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
+import { InnerGlow } from './glass/InnerGlow'
+
 interface Props extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
 	children: ReactNode
 	variant: 'primary' | 'secondary'
@@ -33,7 +35,7 @@ export function Button({
 		<>
 			{variant === 'secondary' && (
 				<>
-					<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl" />
+					<InnerGlow className="rounded-2xl" />
 				</>
 			)}
 			<span className="relative z-10">{children}</span>

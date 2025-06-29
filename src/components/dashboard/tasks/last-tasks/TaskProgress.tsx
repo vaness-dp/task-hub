@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { useMemo } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import type { ITask } from '@/types/task.types'
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export function TaskProgress({ task }: Props) {
-	const statusConfig = getStatusConfig(task.status)
+	const statusConfig = useMemo(() => getStatusConfig(task.status), [task.status])
 
 	if (statusConfig.progress > 0 && statusConfig.progress < 100) {
 		return (
@@ -36,8 +37,10 @@ export function TaskProgress({ task }: Props) {
 		<div
 			className={twMerge(
 				'w-full h-10 rounded-2xl text-white text-sm font-semibold text-center transition-all duration-300 ease-out relative overflow-hidden border border-white/30 flex items-center justify-center space-x-2',
-				`bg-gradient-to-r ${statusConfig.bg}`,
-				`shadow-lg ${statusConfig.glow}`
+				'bg-gradient-to-r',
+				statusConfig.bg,
+				'shadow-lg',
+				statusConfig.glow
 			)}
 		>
 			<div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10 rounded-2xl" />

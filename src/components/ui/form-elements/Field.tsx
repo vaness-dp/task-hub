@@ -5,6 +5,8 @@ import type { UseFormRegisterReturn } from 'react-hook-form'
 
 import { baseClasses, errorClasses, normalClasses } from '@/constants/field-classes'
 
+import { InnerGlow } from '../glass/InnerGlow'
+
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
 	placeholder: string
 	error?: string
@@ -30,7 +32,7 @@ export function Field({
 		<div>
 			<div className="relative overflow-hidden rounded-2xl">
 				{/* Glass effects for input */}
-				<div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 dark:from-white/5 dark:to-transparent rounded-2xl pointer-events-none" />
+				<InnerGlow className="rounded-2xl pointer-events-none" />
 				<div className="absolute inset-[1px] border border-white/40 dark:border-white/30 rounded-2xl pointer-events-none" />
 
 				<input

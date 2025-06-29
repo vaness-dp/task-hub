@@ -11,7 +11,7 @@ interface Props {
 // TODO: вынести эффекты в отдельный компонент
 
 export function CustomTooltip({ active, payload, label }: Props) {
-	if (!active || !payload || !payload.length) return null
+	if (!active || !payload?.length) return null
 
 	return (
 		<div className="backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-2xl p-4 shadow-lg relative overflow-hidden">
