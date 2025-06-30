@@ -10,7 +10,7 @@ interface Props extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className
 	className?: string
 }
 
-export function Button({
+export function AuthButton({
 	children,
 	variant,
 	href,

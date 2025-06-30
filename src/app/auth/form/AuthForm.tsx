@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import { AuthFooter } from '@/app/auth/form/AuthFooter'
+import { AuthFooter } from '@/app/auth/form/auth-footer/AuthFooter'
 
 import { Field } from '@/components/ui/form-elements/Field'
 
-import { Button } from '@/ui/Button'
+import { AuthButton } from '@/ui/AuthButton'
 
 import { AuthToggle } from './AuthToggle'
 import type { IAuthForm } from './auth-form.types'
@@ -64,12 +64,12 @@ export function AuthForm({ isLogin }: { isLogin: boolean }) {
 			</div>
 
 			<div className="pt-4">
-				<Button
+				<AuthButton
 					variant="primary"
 					type="submit"
 				>
 					Continue
-				</Button>
+				</AuthButton>
 			</div>
 
 			<AuthToggle isLogin={isLogin} />

@@ -1,6 +1,6 @@
 import { AuthHeading } from '@/app/auth/AuthHeading'
 
-import { Button } from '@/ui/Button'
+import { AuthButton } from '@/ui/AuthButton'
 import { InnerGlow } from '@/ui/glass/InnerGlow'
 
 import { Pages } from '@/config/pages.config'
@@ -24,19 +24,19 @@ export function AuthInitial() {
 					</AuthHeading>
 
 					<div className="space-y-3 mb-6">
-						<Button
+						<AuthButton
 							variant="primary"
 							href={Pages.LOGIN}
 						>
 							Log in
-						</Button>
+						</AuthButton>
 
-						<Button
+						<AuthButton
 							variant="secondary"
 							href={Pages.REGISTER}
 						>
 							Sign up for free
-						</Button>
+						</AuthButton>
 					</div>
 
 					<div className="text-center">

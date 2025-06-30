@@ -1,35 +1,35 @@
 import { Calendar, CheckCircle, Users } from 'lucide-react'
 
+import { OnlineIndicator } from '@/ui/OnlineIndicator'
+import { GradientOverlay } from '@/ui/glass/GradientOverlay'
+import { Decorative } from '@/ui/glass/auth/Decorative'
+
 export function AuthLogo() {
 	return (
 		<div className="mb-6">
-			{/* Container for logo */}
 			<div className="w-full h-32 relative overflow-hidden rounded-2xl backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10">
-				{/* Inner glow */}
-				<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 dark:from-white/8 dark:to-transparent rounded-2xl" />
+				<GradientOverlay
+					variant="tertiary"
+					className="rounded-2xl"
+				/>
 
-				{/* Decorative elements */}
-				<div className="absolute top-4 right-4 w-8 h-8 backdrop-blur-sm bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-lg rotate-12 flex items-center justify-center">
+				<Decorative className="top-4 right-4 w-8 h-8 rounded-lg rotate-12">
 					<Users className="w-4 h-4 text-primary/70" />
-				</div>
-				<div className="absolute bottom-4 left-4 w-6 h-6 backdrop-blur-sm bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/20 rounded-full flex items-center justify-center">
+				</Decorative>
+				<Decorative className="bottom-4 left-4 w-6 h-6 rounded-full">
 					<Calendar className="w-3 h-3 text-primary/70" />
-				</div>
+				</Decorative>
 
 				{/* Main content */}
 				<div className="relative z-10 flex flex-col items-center justify-center h-full">
 					<div className="relative mb-2">
 						{/* Icon */}
 						<div className="w-12 h-12 backdrop-blur-xl bg-gradient-to-br from-primary/80 to-primary rounded-xl flex items-center justify-center shadow-2xl relative overflow-hidden border border-white/30 dark:border-white/20">
-							<div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent dark:from-white/20" />
-							<div className="absolute inset-[1px] border border-white/40 dark:border-white/30 rounded-xl" />
+							<GradientOverlay variant="quaternary" />
 							<CheckCircle className="w-6 h-6 text-white relative z-10" />
 						</div>
 
-						{/* Indicator */}
-						<div className="absolute -top-1 -right-1 w-4 h-4 backdrop-blur-sm bg-green-500 rounded-full border-2 border-white/50 dark:border-white/30 shadow-lg overflow-hidden">
-							<div className="absolute inset-0 bg-gradient-to-br from-white/40 dark:from-white/30 to-transparent rounded-full" />
-						</div>
+						<OnlineIndicator className="-top-1 -right-1 w-4 h-4" />
 					</div>
 
 					<div className="text-center">
