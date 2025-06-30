@@ -8,7 +8,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'Sheila Dara',
 			avatar: '👩‍💼',
 			time: '09:28 am',
-			isOwn: false
+			isOwn: false,
+			online: true
 		},
 		{
 			id: '2',
@@ -16,7 +17,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'You',
 			avatar: '👤',
 			time: '09:30 am',
-			isOwn: true
+			isOwn: true,
+			online: true
 		},
 		{
 			id: '3',
@@ -24,7 +26,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'Sheila Dara',
 			avatar: '👩‍💼',
 			time: '09:32 am',
-			isOwn: false
+			isOwn: false,
+			online: true
 		},
 		{
 			id: '4',
@@ -32,7 +35,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'You',
 			avatar: '👤',
 			time: '09:35 am',
-			isOwn: true
+			isOwn: true,
+			online: false
 		}
 	],
 	'2': [
@@ -42,7 +46,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'Chris Manuel',
 			avatar: '👨‍💻',
 			time: '09:47 am',
-			isOwn: false
+			isOwn: false,
+			online: false
 		},
 		{
 			id: '2',
@@ -50,7 +55,8 @@ export const MOCK_CHAT_MESSAGES: Record<string, IMessage[]> = {
 			sender: 'You',
 			avatar: '👤',
 			time: '09:50 am',
-			isOwn: true
+			isOwn: true,
+			online: false
 		}
 	]
 }

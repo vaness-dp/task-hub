@@ -8,17 +8,11 @@ interface Props {
 	label?: string
 }
 
-// TODO: вынести эффекты в отдельный компонент
-
 export function CustomTooltip({ active, payload, label }: Props) {
 	if (!active || !payload?.length) return null
 
 	return (
 		<div className="backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-2xl p-4 shadow-lg relative overflow-hidden">
-			{/* Effects */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 dark:from-white/8 dark:to-transparent rounded-2xl" />
-			<div className="absolute inset-[1px] border border-white/40 rounded-2xl pointer-events-none dark:border-transparent" />
-
 			<div className="relative z-10">
 				<p className="text-sm font-semibold text-gray-900 dark:text-white mb-3">{label}</p>
 				<div className="space-y-2">

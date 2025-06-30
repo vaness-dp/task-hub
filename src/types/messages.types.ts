@@ -18,4 +18,5 @@ export interface IMessage {
 	time: string
 	isOwn: boolean
 	chatId?: string
+	online: boolean
 }

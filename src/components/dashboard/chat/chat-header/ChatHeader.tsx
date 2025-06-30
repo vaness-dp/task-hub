@@ -1,10 +1,13 @@
-import { MoreHorizontal, Phone, Users, Video } from 'lucide-react'
+import { Users } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 
-import { ButtonAction } from '@/ui/chat-elements/ButtonAction'
+import { OnlineIndicator } from '@/ui/OnlineIndicator'
 
 import type { IMessage } from '@/types/messages.types'
 
+import { ChatAvatar } from '../ChatAvatar'
+
+import { ButtonActions } from './ButtonActions'
 import { MOCK_CHAT_HEADER_DATA } from './chat-header.data'
 
 interface Props extends Pick<IMessage, 'chatId'> {
@@ -23,32 +26,15 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 				isSmall && 'p-4'
 			)}
 		>
-			{/* Effects */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/12 dark:from-white/5 dark:to-transparent" />
-			<div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/20 to-transparent" />
-
 			<div className="flex items-center justify-between relative z-10">
 				{/* Chat info */}
 				<div className="flex items-center space-x-3">
 					<div className="relative">
-						<div
-							className={twMerge(
-								'w-12 h-12 backdrop-blur-sm bg-white/80 dark:bg-white/20 border border-gray-200 dark:border-white/20 rounded-2xl flex items-center justify-center text-lg relative overflow-hidden shadow-sm',
-								isSmall && 'w-10 h-10'
-							)}
-						>
-							<div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-white/20 dark:from-white/30 dark:to-white/10 rounded-2xl" />
-							<div className="absolute inset-[1px] border border-white/60 rounded-2xl pointer-events-none dark:border-transparent" />
-							<span className="relative z-10">{chat.avatar}</span>
-						</div>
-						{chat.online && (
-							<div
-								className={twMerge(
-									'absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-sm',
-									isSmall && 'w-3 h-3'
-								)}
-							/>
-						)}
+						<ChatAvatar
+							isSmall={isSmall}
+							avatar={chat.avatar}
+						/>
+						{chat.online && <OnlineIndicator />}
 					</div>
 
 					<div>
@@ -74,19 +60,7 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 						</div>
 					</div>
 				</div>
-
-				{/* Actions */}
-				<div className="flex items-center space-x-2">
-					<ButtonAction className={twMerge(isSmall && 'w-8 h-8')}>
-						<Phone className="icon" />
-					</ButtonAction>
-					<ButtonAction className={twMerge(isSmall && 'w-8 h-8')}>
-						<Video className="icon" />
-					</ButtonAction>
-					<ButtonAction className={twMerge(isSmall && 'w-8 h-8')}>
-						<MoreHorizontal className="icon" />
-					</ButtonAction>
-				</div>
+				<ButtonActions isSmall={isSmall} />
 			</div>
 		</div>
 	)
