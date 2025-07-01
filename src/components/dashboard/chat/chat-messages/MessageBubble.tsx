@@ -36,12 +36,11 @@ export function MessageBubble({ message }: Props) {
 					className={cn(
 						'px-4 py-3 rounded-2xl max-w-full relative overflow-hidden',
 						message.isOwn
-							? 'bg-primary text-white rounded-br-md shadow-lg'
-							: 'backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/20 text-gray-900 dark:text-white rounded-bl-md'
+							? 'bg-gradient-to-r from-primary to-primary/90 text-white rounded-br-md shadow-lg'
+							: 'backdrop-blur-xl bg-white/60 dark:bg-neutral-800/80 border border-white/30 dark:border-white/10 text-gray-900 dark:text-white rounded-bl-md'
 					)}
 				>
 					{!message.isOwn && <InnerGlow className="rounded-2xl" />}
-
 					{message.isOwn && <GradientOverlay variant="secondary" />}
 
 					<div className="relative z-10">
@@ -49,7 +48,7 @@ export function MessageBubble({ message }: Props) {
 						<p
 							className={cn(
 								'text-xs mt-1',
-								message.isOwn ? 'text-white/70' : 'text-gray-500 dark:text-gray-400'
+								message.isOwn ? 'text-white/80' : 'text-gray-500 dark:text-gray-300'
 							)}
 						>
 							{message.time}

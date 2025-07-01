@@ -6,6 +6,8 @@ import { ProjectStats } from '@/components/dashboard/project-stats/ProjectStats'
 import { ProjectsStatistic } from '@/components/dashboard/projects-statistic/ProjectsStatistic'
 import { LastTasks } from '@/components/dashboard/tasks/last-tasks/LastTasks'
 import { MOCK_LAST_TASKS } from '@/components/dashboard/tasks/last-tasks/last-tasks.data'
+import { TodayTasks } from '@/components/dashboard/tasks/today-tasks/TodayTasks'
+import { MOCK_TODAY_TASKS } from '@/components/dashboard/tasks/today-tasks/today-tasks.data'
 
 export function Dashboard() {
 	return (
@@ -26,9 +28,9 @@ export function Dashboard() {
 						<LastTasks tasks={MOCK_LAST_TASKS} />
 					</div>
 
-					{/* <div className="today-tasks">
+					<div className="today-tasks">
 						<TodayTasks tasks={MOCK_TODAY_TASKS} />
-					</div> */}
+					</div>
 				</div>
 			</div>
 

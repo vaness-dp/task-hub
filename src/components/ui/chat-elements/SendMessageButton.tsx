@@ -15,10 +15,7 @@ export function SendMessageButton({ className, ...props }: Props) {
 			className={twMerge('send-message-button', className)}
 			{...props}
 		>
-			<GradientOverlay
-				variant="secondary"
-				className="rounded-xl"
-			/>
+			<GradientOverlay variant="secondary" />
 			<Send className="w-4 h-4 relative z-10" />
 		</button>
 	)

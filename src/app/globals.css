@@ -5,6 +5,59 @@
 	--color-primary: #806df2;
 }
 
+/* Base Styles */
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	font-family: var(--font-suse), sans-serif;
+}
+
+body {
+	@apply bg-gradient-to-t from-[#f3eeff] to-[#f6f5ff] dark:from-[#1a1a1a] dark:to-[#121212] text-neutral-900 dark:text-neutral-100;
+
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+button {
+	@apply cursor-pointer;
+}
+
+@keyframes blob {
+	0% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	33% {
+		transform: translate(30px, -50px) scale(1.1);
+	}
+	66% {
+		transform: translate(-20px, 20px) scale(0.9);
+	}
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+}
+
+.animate-blob {
+	animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+	animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+	animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+	animation-delay: 6s;
+}
+
 /* Dashboard */
 
 .dashboard-grid {
@@ -77,12 +130,31 @@
 	@apply w-10 h-10 bg-white/40 dark:bg-white/20 rounded-full border-2 border-white/50 dark:border-white/30 flex items-center justify-center text-sm font-medium text-gray-700 dark:text-gray-300 relative overflow-hidden backdrop-blur-sm shadow-sm;
 }
 
+.task-filter-item {
+	@apply relative flex items-center justify-between w-full text-left px-4 py-2.5 text-sm transition-colors duration-200;
+}
+
+.task-filter-trigger {
+	@apply inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg relative overflow-hidden bg-gradient-to-r shadow-sm transition-colors duration-200;
+}
+
+.task-filter-menu {
+	@apply absolute top-full right-0 mt-2 min-w-[12rem] bg-white dark:bg-neutral-900/90 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-white/10 shadow-lg dark:shadow-xl overflow-hidden z-50;
+}
+
 /* Today Tasks */
 
 .today-tasks {
 	grid-column: 1 / -1;
 	grid-row: 3;
-	min-height: 600px;
+}
+
+.today-task-card {
+	@apply max-w-80 rounded-3xl cursor-pointer backdrop-blur-xl border border-white/30 dark:border-white/20 overflow-hidden;
+}
+
+.today-task-icon {
+	@apply w-12 h-12 backdrop-blur-sm bg-white/30 dark:bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/40 dark:border-white/30 relative overflow-hidden;
 }
 
 .icon {
@@ -112,56 +184,5 @@
 }
 
 .text-area {
-	@apply w-full px-4 py-2 resize-none backdrop-blur-xl bg-white/60 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-2xl text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-200 dark:hover:bg-white/8;
-}
-/* Base Styles */
-
-html {
-	font-size: 16px;
-}
-
-html,
-body {
-	font-family: var(--font-suse), sans-serif;
-}
-
-body {
-	@apply bg-gradient-to-t from-[#f3eeff] to-[#f6f5ff] dark:from-[#1a1a1a] dark:to-[#121212] text-neutral-900 dark:text-neutral-100;
-	min-width: 320px;
-	min-height: 100vh;
-}
-
-button {
-	@apply cursor-pointer;
-}
-
-@keyframes blob {
-	0% {
-		transform: translate(0px, 0px) scale(1);
-	}
-	33% {
-		transform: translate(30px, -50px) scale(1.1);
-	}
-	66% {
-		transform: translate(-20px, 20px) scale(0.9);
-	}
-	100% {
-		transform: translate(0px, 0px) scale(1);
-	}
-}
-
-.animate-blob {
-	animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-	animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-	animation-delay: 4s;
-}
-
-.animation-delay-6000 {
-	animation-delay: 6s;
+	@apply w-full px-4 py-2 resize-none backdrop-blur-xl bg-white/60 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-2xl text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-primary/50 transition-all duration-200 dark:hover:bg-white/8;
 }

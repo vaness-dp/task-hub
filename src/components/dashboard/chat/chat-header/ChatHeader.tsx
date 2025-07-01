@@ -2,6 +2,7 @@ import { Users } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 
 import { OnlineIndicator } from '@/ui/OnlineIndicator'
+import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 
 import type { IMessage } from '@/types/messages.types'
 
@@ -22,10 +23,14 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 	return (
 		<div
 			className={twMerge(
-				'p-6 border-b border-gray-200 dark:border-white/10 backdrop-blur-xl bg-white/40 dark:bg-white/3 relative overflow-hidden',
+				'p-6 border-b border-white/30 dark:border-white/10 backdrop-blur-xl bg-white/40 dark:bg-neutral-800/80 relative overflow-hidden',
 				isSmall && 'p-4'
 			)}
 		>
+			<GradientOverlay
+				variant="secondary"
+				className="rounded-none"
+			/>
 			<div className="flex items-center justify-between relative z-10">
 				{/* Chat info */}
 				<div className="flex items-center space-x-3">
@@ -46,7 +51,7 @@ export function ChatHeader({ chatId, isSmall }: Props) {
 						>
 							{chat.name}
 						</h2>
-						<div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+						<div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
 							<span>{chat.role}</span>
 							{chat.members > 1 && (
 								<>

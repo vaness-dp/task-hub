@@ -21,3 +21,7 @@ export interface ITodayTask {
 	color: string
 	team: string[]
 }
+
+export interface ITaskWithTeam {
+	team: string[]
+}

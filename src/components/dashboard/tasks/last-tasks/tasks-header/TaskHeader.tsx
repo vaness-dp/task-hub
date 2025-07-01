@@ -1,11 +1,11 @@
 import * as m from 'framer-motion/m'
 import { Plane } from 'lucide-react'
 
+import { TeamAvatars } from '@/ui/team-avatars/TeamAvatars'
+
 import { taskCard } from '@/constants/animations/dashboard/task-card.animations'
 
 import type { ITask } from '@/types/task.types'
-
-import { TeamAvatars } from './TeamAvatars'
 
 interface Props {
 	task: ITask
