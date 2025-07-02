@@ -3,10 +3,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { LazyMotion, domAnimation } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
-import { type ReactNode, useState } from 'react'
+import { useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 
-export function Providers({ children }: { children: ReactNode }) {
+import type { WithChildren } from '@/types'
+
+export function Providers({ children }: WithChildren) {
 	const [queryClient] = useState(
 		() =>
 			new QueryClient({

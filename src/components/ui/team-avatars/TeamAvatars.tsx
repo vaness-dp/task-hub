@@ -6,6 +6,7 @@ import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 import type { ITaskWithTeam } from '@/types/task.types'
 
 import { AvatarCounter } from './AvatarCounter'
+import { avatarClass, containerClass } from './team-avatars.styles'
 
 interface Props {
 	task?: ITaskWithTeam
@@ -25,24 +26,12 @@ export function TeamAvatars({
 	const members = task?.team || teamMembers || []
 	const remainingCount = members.length - maxVisible
 
-	const containerClass = cn(
-		'flex flex-shrink-0',
-		variant === 'task-block' ? '-space-x-1' : '-space-x-2 ml-3'
-	)
-
-	const avatarClass = cn(
-		'relative overflow-hidden flex items-center justify-center',
-		variant === 'task-block'
-			? 'w-8 h-8 backdrop-blur-sm bg-white/40 dark:bg-white/30 rounded-full border border-white/60 dark:border-white/50 text-sm'
-			: 'team-avatars'
-	)
-
 	return (
-		<div className={containerClass}>
+		<div className={containerClass({ variant })}>
 			{members.slice(0, maxVisible).map((member, index) => (
 				<div
 					key={index}
-					className={avatarClass}
+					className={avatarClass({ variant })}
 				>
 					<GradientOverlay
 						variant="quinary"

@@ -1,8 +1,9 @@
-import cn from 'clsx'
 import * as m from 'framer-motion/m'
 import type { LucideIcon } from 'lucide-react'
 
 import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
+
+import { cn } from '@/utils/styles'
 
 interface Props {
 	icon: LucideIcon

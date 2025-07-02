@@ -4,13 +4,11 @@ export const cardAnimations = {
 	basic: {
 		initial: {
 			scale: 1,
-			y: 0,
-			boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)'
+			y: 0
 		},
 		hover: {
 			scale: 1.02,
 			y: -8,
-			boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.15)',
 			transition: {
 				type: 'spring',
 				stiffness: 400,

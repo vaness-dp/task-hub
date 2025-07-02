@@ -1,12 +1,8 @@
 import cn from 'clsx'
-import type { ReactNode } from 'react'
 
-interface Props {
-	children: ReactNode
-	className?: string
-}
+import type { BaseProps } from '@/types'
 
-export function Heading({ children, className = '' }: Props) {
+export function Heading({ children, className = '' }: BaseProps) {
 	return (
 		<div className="flex items-center space-x-4 relative">
 			<h1

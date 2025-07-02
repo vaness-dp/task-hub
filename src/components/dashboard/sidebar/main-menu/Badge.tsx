@@ -1,9 +1,9 @@
-import cn from 'clsx'
-import type { ReactNode } from 'react'
+import { cn } from '@/utils/styles'
 
-interface Props {
+import type { WithChildren } from '@/types'
+
+interface Props extends WithChildren {
 	isActive?: boolean
-	children?: ReactNode
 }
 
 export function Badge({ isActive, children }: Props) {

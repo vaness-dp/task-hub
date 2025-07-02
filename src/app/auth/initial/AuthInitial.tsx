@@ -5,12 +5,11 @@ import { InnerGlow } from '@/ui/glass/InnerGlow'
 
 import { Pages } from '@/config/pages.config'
 
-import { AuthLogo } from './AuthLogo'
+import { AuthLogo } from './AuthLogo/AuthLogo'
 
 export function AuthInitial() {
 	return (
 		<div className="relative">
-			{/* Container */}
 			<div className="relative backdrop-blur-2xl bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-3xl shadow-2xl p-8 overflow-hidden">
 				<InnerGlow className="rounded-3xl" />
 

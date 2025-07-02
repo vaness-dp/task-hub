@@ -5,9 +5,10 @@ import { Paperclip, Smile } from 'lucide-react'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
+import { TextArea } from '@/components/ui/chat-elements/TextArea'
+
 import { ButtonAction } from '@/ui/chat-elements/ButtonAction'
 import { SendMessageButton } from '@/ui/chat-elements/SendMessageButton'
-import { TextArea } from '@/ui/chat-elements/TextArea'
 
 interface Props {
 	isSmall?: boolean

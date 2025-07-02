@@ -1,4 +1,4 @@
-import cn from 'clsx'
+import { cn } from '@/utils/styles'
 
 import type { ITask } from '@/types/task.types'
 

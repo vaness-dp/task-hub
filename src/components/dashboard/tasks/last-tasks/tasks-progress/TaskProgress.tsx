@@ -1,5 +1,6 @@
-import cn from 'clsx'
 import { useMemo } from 'react'
+
+import { cn } from '@/utils/styles'
 
 import type { ITask } from '@/types/task.types'
 

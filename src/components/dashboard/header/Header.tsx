@@ -2,14 +2,18 @@
 
 import dynamic from 'next/dynamic'
 
-import { Heading } from '@/ui/Heading'
+import { Heading } from '@/components/ui/Heading'
+
 import { SearchField } from '@/ui/search-field/SearchField'
 
 import { Notifications } from './Notifications'
 
-const DynamicThemeToggle = dynamic(() => import('@/ui/ThemeToggle').then(mod => mod.ThemeToggle), {
-	ssr: false
-})
+const DynamicThemeToggle = dynamic(
+	() => import('@/components/ui/ThemeToggle').then(mod => ({ default: mod.ThemeToggle })),
+	{
+		ssr: false
+	}
+)
 
 export function Header() {
 	return (

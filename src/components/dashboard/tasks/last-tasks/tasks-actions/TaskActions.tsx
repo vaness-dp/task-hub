@@ -1,5 +1,6 @@
-import cn from 'clsx'
 import { Edit, Plus } from 'lucide-react'
+
+import { cn } from '@/utils/styles'
 
 import { ActionButton } from './ActionButton'
 

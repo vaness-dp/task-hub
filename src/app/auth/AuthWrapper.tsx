@@ -1,11 +1,9 @@
-import type { ReactNode } from 'react'
-
 import { InnerGlow } from '@/ui/glass/InnerGlow'
 
 import { AuthHeading } from './AuthHeading'
+import type { WithChildren } from '@/types'
 
-interface Props {
-	children: ReactNode
+interface Props extends WithChildren {
 	heading: string
 }
 

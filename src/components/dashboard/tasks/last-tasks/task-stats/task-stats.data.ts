@@ -3,12 +3,19 @@ import { Image, Link, MessageCircle } from 'lucide-react'
 
 import type { ITask } from '@/types/task.types'
 
-export interface Props {
+/**
+ * Configuration interface for task statistics items
+ */
+export interface TaskStatConfig {
 	icon: LucideIcon
 	key: keyof Pick<ITask, 'comments' | 'images' | 'links'>
 }
 
-export const STATS_DATA: Props[] = [
+/**
+ * Configuration array for task statistics display
+ * Defines which stats to show and their corresponding icons
+ */
+export const STATS_DATA: readonly TaskStatConfig[] = [
 	{ icon: MessageCircle, key: 'comments' },
 	{ icon: Image, key: 'images' },
 	{ icon: Link, key: 'links' }

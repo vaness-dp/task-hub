@@ -1,12 +1,8 @@
-import type { ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-interface Props {
-	children: ReactNode
-	className?: string
-}
+import type { BaseProps } from '@/types'
 
-export function Decorative({ children, className }: Props) {
+export function Decorative({ children, className = '' }: BaseProps) {
 	return (
 		<div
 			className={twMerge(

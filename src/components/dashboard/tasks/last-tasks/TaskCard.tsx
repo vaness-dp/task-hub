@@ -31,17 +31,20 @@ export function TaskCard({ task }: Props) {
 			<InnerGlow />
 
 			<div className="relative z-10 p-6 flex flex-col h-full">
+				{/* Task header with icon, title and team */}
 				<div className="h-[120px] flex flex-col">
 					<TaskHeader task={task} />
 					<TaskContent task={task} />
 				</div>
 
+				{/* Progress section */}
 				<div className="h-[50px] flex items-center">
 					<TaskProgress task={task} />
 				</div>
 
 				<div className="flex-1" />
 
+				{/* Footer with stats and actions */}
 				<div className="h-[50px] flex items-center justify-between">
 					<TaskStats task={task} />
 					<TaskActions />

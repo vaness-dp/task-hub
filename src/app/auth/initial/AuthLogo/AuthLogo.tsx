@@ -1,8 +1,9 @@
-import { Calendar, CheckCircle, Users } from 'lucide-react'
+import { Calendar, Users } from 'lucide-react'
 
-import { OnlineIndicator } from '@/ui/OnlineIndicator'
+import { Decorative } from '@/ui/glass/Decorative'
 import { GradientOverlay } from '@/ui/glass/GradientOverlay'
-import { Decorative } from '@/ui/glass/auth/Decorative'
+
+import { AuthIcon } from './AuthIcon'
 
 export function AuthLogo() {
 	return (
@@ -20,18 +21,8 @@ export function AuthLogo() {
 					<Calendar className="w-3 h-3 text-primary/70" />
 				</Decorative>
 
-				{/* Main content */}
 				<div className="relative z-10 flex flex-col items-center justify-center h-full">
-					<div className="relative mb-2">
-						{/* Icon */}
-						<div className="w-12 h-12 backdrop-blur-xl bg-gradient-to-br from-primary/80 to-primary rounded-xl flex items-center justify-center shadow-2xl relative overflow-hidden border border-white/30 dark:border-white/20">
-							<GradientOverlay variant="quaternary" />
-							<CheckCircle className="w-6 h-6 text-white relative z-10" />
-						</div>
-
-						<OnlineIndicator className="-top-1 -right-1 w-4 h-4" />
-					</div>
-
+					<AuthIcon />
 					<div className="text-center">
 						<div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">Task Hub</div>
 						<div className="text-xs text-neutral-500 dark:text-gray-400 font-medium">
