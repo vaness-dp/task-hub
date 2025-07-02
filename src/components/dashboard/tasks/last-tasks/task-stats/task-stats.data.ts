@@ -5,11 +5,11 @@ import type { ITask } from '@/types/task.types'
 
 export interface Props {
 	icon: LucideIcon
-	key: keyof Pick<ITask, 'comments' | 'views' | 'likes'>
+	key: keyof Pick<ITask, 'comments' | 'images' | 'links'>
 }
 
 export const STATS_DATA: Props[] = [
 	{ icon: MessageCircle, key: 'comments' },
-	{ icon: Image, key: 'views' },
-	{ icon: Link, key: 'likes' }
+	{ icon: Image, key: 'images' },
+	{ icon: Link, key: 'links' }
 ] as const

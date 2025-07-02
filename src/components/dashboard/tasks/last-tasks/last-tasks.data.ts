@@ -8,156 +8,156 @@ export const MOCK_LAST_TASKS: ITask[] = [
 		title: 'Travel App',
 		subtitle: 'User Flow',
 		icon: '✈️',
-		dueDate: '3 days',
+		dueDate: '2025-07-18',
 		team: ['👩‍💼', '👨‍💻', '👩‍🎨'],
 		status: 'in-progress',
 		comments: 3,
-		views: 6,
-		likes: 2
+		images: 2,
+		links: 6
 	},
 	{
 		id: '2',
 		title: 'Travel App',
 		subtitle: 'User Flow',
 		icon: '✈️',
-		dueDate: 'May',
+		dueDate: '2025-07-15',
 		team: ['👩‍💼', '👨‍💻', '👩‍🎨'],
 		status: 'completed',
 		comments: 3,
-		views: 6,
-		likes: 2
+		images: 2,
+		links: 6
 	},
 	{
 		id: '3',
 		title: 'Travel App',
 		subtitle: 'User Flow',
 		icon: '✈️',
-		dueDate: '3 days',
+		dueDate: '2025-07-18',
 		team: ['👩‍💼', '👨‍💻', '👩‍🎨'],
 		status: 'review',
 		comments: 3,
-		views: 6,
-		likes: 2
+		images: 2,
+		links: 6
 	},
 	{
 		id: '4',
 		title: 'E-Commerce Platform',
 		subtitle: 'Checkout Redesign',
 		icon: '🛒',
-		dueDate: '5 days',
+		dueDate: '2025-01-20',
 		team: ['👨‍💻', '👩‍💼'],
 		status: 'in-progress',
 		comments: 5,
-		views: 12,
-		likes: 4
+		images: 4,
+		links: 12
 	},
 	{
 		id: '5',
 		title: 'Fitness App',
 		subtitle: 'Dark Mode UI',
 		icon: '💪',
-		dueDate: '2 days',
+		dueDate: '2025-06-17',
 		team: ['👨‍🎨', '👩‍💼', '👨‍💻'],
 		status: 'completed',
 		comments: 2,
-		views: 8,
-		likes: 1
+		images: 1,
+		links: 8
 	},
 	{
 		id: '6',
 		title: 'Portfolio Website',
 		subtitle: 'Mobile Responsiveness',
 		icon: '🌐',
-		dueDate: '1 day',
+		dueDate: '2025-06-16',
 		team: ['👨‍💻'],
 		status: 'review',
 		comments: 1,
-		views: 10,
-		likes: 3
+		images: 3,
+		links: 10
 	},
 	{
 		id: '7',
 		title: 'AI Chatbot',
 		subtitle: 'Training Dataset',
 		icon: '🤖',
-		dueDate: '7 days',
+		dueDate: '2025-05-22',
 		team: ['👩‍💼', '👨‍💻'],
 		status: 'completed',
 		comments: 4,
-		views: 15,
-		likes: 7
+		images: 7,
+		links: 15
 	},
 	{
 		id: '8',
 		title: 'Event Management System',
 		subtitle: 'Calendar Integration',
 		icon: '📆',
-		dueDate: '4 days',
+		dueDate: '2025-07-19',
 		team: ['👨‍💻', '👩‍🎨'],
 		status: 'in-progress',
 		comments: 3,
-		views: 11,
-		likes: 2
+		images: 2,
+		links: 11
 	},
 	{
 		id: '9',
 		title: 'Dashboard UI',
 		subtitle: 'Refactor Components',
 		icon: '🧩',
-		dueDate: '2 days',
+		dueDate: '2025-08-17',
 		team: ['👨‍💻', '👩‍🎨'],
 		status: 'in-progress',
 		comments: 6,
-		views: 18,
-		likes: 5
+		images: 5,
+		links: 18
 	},
 	{
 		id: '10',
 		title: 'Landing Page',
 		subtitle: 'Add Scroll Animations',
 		icon: '🎯',
-		dueDate: '1 day',
+		dueDate: '2025-06-16',
 		team: ['👨‍🎨'],
 		status: 'in-progress',
 		comments: 1,
-		views: 7,
-		likes: 2
+		images: 2,
+		links: 7
 	},
 	{
 		id: '11',
 		title: 'UI Kit',
 		subtitle: 'Create Button Variants',
 		icon: '🎨',
-		dueDate: '3 days',
+		dueDate: '2025-07-18',
 		team: ['👩‍🎨', '👨‍💻'],
 		status: 'review',
 		comments: 4,
-		views: 10,
-		likes: 3
+		images: 3,
+		links: 10
 	},
 	{
 		id: '12',
 		title: 'Responsive Design',
 		subtitle: 'Tablet & Mobile Layouts',
 		icon: '📱',
-		dueDate: '4 days',
+		dueDate: '2025-09-19',
 		team: ['👨‍💻'],
 		status: 'in-progress',
 		comments: 2,
-		views: 9,
-		likes: 1
+		images: 1,
+		links: 9
 	},
 	{
 		id: '13',
 		title: 'API Integration',
 		subtitle: 'Render Dynamic Data',
 		icon: '🔗',
-		dueDate: '2 days',
+		dueDate: '2025-06-17',
 		team: ['👨‍💻', '👩‍💼'],
 		status: 'completed',
 		comments: 5,
-		views: 14,
-		likes: 6
+		images: 6,
+		links: 14
 	}
 ]
 

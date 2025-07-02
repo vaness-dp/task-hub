@@ -127,7 +127,7 @@ button {
 }
 
 .team-avatars {
-	@apply w-10 h-10 bg-white/40 dark:bg-white/20 rounded-full border-2 border-white/50 dark:border-white/30 flex items-center justify-center text-sm font-medium text-gray-700 dark:text-gray-300 relative overflow-hidden backdrop-blur-sm shadow-sm;
+	@apply w-10 h-10 bg-white/40 dark:bg-white/10 rounded-full border-2 border-white/50 dark:border-white/30 flex items-center justify-center text-sm font-medium text-gray-700 dark:text-gray-300 relative overflow-hidden backdrop-blur-sm shadow-sm;
 }
 
 .task-filter-item {

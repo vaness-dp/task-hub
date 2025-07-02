@@ -7,8 +7,8 @@ export interface ITask {
 	team: string[]
 	status: 'completed' | 'in-progress' | 'review' | 'todo'
 	comments: number
-	views: number
-	likes: number
+	images: number
+	links: number
 }
 
 export interface ITodayTask {

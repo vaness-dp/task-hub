@@ -7,7 +7,7 @@ interface Props {
 	itemsPerPage?: number
 }
 
-export function useTasksSlider({ tasks, itemsPerPage = 3 }: Props) {
+export function useLastTasksSlider({ tasks, itemsPerPage = 3 }: Props) {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const totalPages = Math.ceil(tasks.length / itemsPerPage)
 	const canSlideLeft = currentIndex > 0

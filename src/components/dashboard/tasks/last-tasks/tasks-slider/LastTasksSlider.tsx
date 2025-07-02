@@ -13,7 +13,7 @@ interface Props {
 	activeFilter?: string
 }
 
-export function TasksSlider({ tasks, currentIndex, activeFilter = 'all' }: Props) {
+export function LastTasksSlider({ tasks, currentIndex, activeFilter = 'all' }: Props) {
 	const itemsPerPage = 3
 	const visibleTasks = tasks.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage)
 
