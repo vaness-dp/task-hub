@@ -1,8 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-
 import { AuthFooter } from '@/app/auth/form/auth-footer/AuthFooter'
 
 import { Field } from '@/components/ui/form-elements/Field'
@@ -10,55 +7,55 @@ import { Field } from '@/components/ui/form-elements/Field'
 import { AuthButton } from '@/ui/AuthButton'
 
 import { AuthToggle } from './AuthToggle'
-import type { IAuthForm } from './auth-form.types'
+import { useAuthForm } from './useAuthForm'
 
-export function AuthForm({ isLogin }: { isLogin: boolean }) {
-	const [showPassword, setShowPassword] = useState(false)
-
+export const AuthForm = ({ isLogin }: { isLogin: boolean }) => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors },
-		watch,
-		reset
-	} = useForm<IAuthForm>({
-		mode: 'onChange'
-	})
+		errors,
+		showPassword,
+		togglePasswordVisibility,
+		isLoading,
+		validationRules
+	} = useAuthForm({ isLogin })
 
 	return (
 		<form
-			onSubmit={handleSubmit(data => console.log(data))}
+			onSubmit={handleSubmit}
 			className="space-y-4"
 		>
 			<div className="space-y-4">
 				<Field
 					type="email"
-					registration={register('email', { required: 'Email is required!' })}
+					registration={register('email', validationRules.email)}
 					error={errors.email?.message}
 					hasError={!!errors.email}
 					placeholder="your@email.com"
+					disabled={isLoading}
 				/>
+
 				<Field
 					type="password"
-					registration={register('password', { required: 'Password is required!' })}
+					registration={register('password', validationRules.password)}
 					showPassword={showPassword}
-					onTogglePassword={() => setShowPassword(!showPassword)}
+					onTogglePassword={togglePasswordVisibility}
 					error={errors.password?.message}
 					hasError={!!errors.password}
 					placeholder="Enter your password"
+					disabled={isLoading}
 				/>
+
 				{!isLogin && (
 					<Field
 						type="password"
-						registration={register('confirmPassword', {
-							required: 'Confirm password is required!',
-							validate: value => value === watch('password') || 'Password`s don`t match!'
-						})}
+						registration={register('confirmPassword', validationRules.confirmPassword)}
 						showPassword={showPassword}
-						onTogglePassword={() => setShowPassword(!showPassword)}
+						onTogglePassword={togglePasswordVisibility}
 						error={errors.confirmPassword?.message}
 						hasError={!!errors.confirmPassword}
 						placeholder="Confirm your password"
+						disabled={isLoading}
 					/>
 				)}
 			</div>
@@ -67,8 +64,9 @@ export function AuthForm({ isLogin }: { isLogin: boolean }) {
 				<AuthButton
 					variant="primary"
 					type="submit"
+					disabled={isLoading}
 				>
-					Continue
+					{isLoading ? 'Loading...' : 'Continue'}
 				</AuthButton>
 			</div>
 

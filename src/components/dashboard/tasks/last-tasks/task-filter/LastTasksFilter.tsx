@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import * as m from 'framer-motion/m'
 
 import { taskFilter } from '@/constants/animations/dashboard/task-filter.animations'
@@ -27,31 +28,36 @@ export function LastTasksFilter({ tasks, activeFilter, onChange }: ITaskFilterPr
 				onClick={() => setIsOpen(!isOpen)}
 			/>
 
-			<m.div
-				initial="initial"
-				animate={isOpen ? 'open' : 'closed'}
-				variants={taskFilter.menu}
-				className="task-filter-menu"
-			>
-				<div className="divide-y divide-gray-100/50 dark:divide-white/5">
-					{TASK_FILTERS_DATA.map((filter, index) => {
-						const isActive = activeFilter === filter.value
-						const count = filter.value === 'all' ? tasks.length : statusCount[filter.value] || 0
+			<AnimatePresence>
+				{isOpen && (
+					<m.div
+						initial="initial"
+						animate="open"
+						exit="closed"
+						variants={taskFilter.menu}
+						className="task-filter-menu"
+					>
+						<div className="divide-y divide-gray-100/50 dark:divide-white/5">
+							{TASK_FILTERS_DATA.map((filter, index) => {
+								const isActive = activeFilter === filter.value
+								const count = filter.value === 'all' ? tasks.length : statusCount[filter.value] || 0
 
-						return (
-							<FilterItem
-								key={filter.value}
-								label={filter.label}
-								value={filter.value}
-								count={count}
-								index={index}
-								isActive={isActive}
-								onClick={() => handleFilterChange(filter.value)}
-							/>
-						)
-					})}
-				</div>
-			</m.div>
+								return (
+									<FilterItem
+										key={filter.value}
+										label={filter.label}
+										value={filter.value}
+										count={count}
+										index={index}
+										isActive={isActive}
+										onClick={() => handleFilterChange(filter.value)}
+									/>
+								)
+							})}
+						</div>
+					</m.div>
+				)}
+			</AnimatePresence>
 		</div>
 	)
 }

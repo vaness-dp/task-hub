@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 import { TeamAvatars } from '@/ui/team-avatars/TeamAvatars'
 
-import { projectStatCard } from '@/constants/animations/dashboard/project-stat-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 import type { ITodayTask } from '@/types/task.types'
 
@@ -20,7 +20,7 @@ export function TodayTaskCard({ task }: Props) {
 		<m.div
 			initial="initial"
 			whileHover="hover"
-			variants={projectStatCard.card}
+			variants={cardAnimations.basic}
 			className={twMerge('today-task-card', task.color)}
 			role="button"
 			tabIndex={0}

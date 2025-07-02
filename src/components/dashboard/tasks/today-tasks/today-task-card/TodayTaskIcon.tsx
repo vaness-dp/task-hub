@@ -3,7 +3,7 @@ import { Plane } from 'lucide-react'
 
 import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 
-import { taskCard } from '@/constants/animations/dashboard/task-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 interface Props {
 	icon: string
@@ -12,7 +12,7 @@ interface Props {
 export function TodayTaskIcon({ icon }: Props) {
 	return (
 		<m.div
-			variants={taskCard.icon}
+			variants={cardAnimations.intense}
 			className="today-task-icon"
 		>
 			<GradientOverlay

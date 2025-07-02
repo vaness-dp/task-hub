@@ -2,7 +2,7 @@ import cn from 'clsx'
 import * as m from 'framer-motion/m'
 import type { LucideIcon } from 'lucide-react'
 
-import { taskCard } from '@/constants/animations/dashboard/task-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 interface Props {
 	icon: LucideIcon
@@ -13,7 +13,7 @@ interface Props {
 export function StatItem({ icon: Icon, value, className }: Props) {
 	return (
 		<m.div
-			variants={taskCard.stats}
+			variants={cardAnimations.subtle}
 			className={cn('flex items-center space-x-1.5 text-gray-500 dark:text-gray-400', className)}
 		>
 			<Icon className="w-4 h-4" />

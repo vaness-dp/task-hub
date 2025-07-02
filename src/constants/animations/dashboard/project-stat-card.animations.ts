@@ -1,7 +1,7 @@
 import type { Variants } from 'framer-motion'
 
-export const projectStatCard = {
-	card: {
+export const cardAnimations = {
+	basic: {
 		initial: {
 			scale: 1,
 			y: 0,
@@ -18,8 +18,8 @@ export const projectStatCard = {
 			} as const
 		}
 	} satisfies Variants,
-
-	content: {
+	// content
+	subtle: {
 		initial: {
 			scale: 1,
 			y: 0
@@ -35,8 +35,8 @@ export const projectStatCard = {
 			} as const
 		}
 	} satisfies Variants,
-
-	icon: {
+	// icon
+	intense: {
 		initial: {
 			scale: 1,
 			rotate: 0,

@@ -4,7 +4,7 @@ import * as m from 'framer-motion/m'
 import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 import { InnerGlow } from '@/ui/glass/InnerGlow'
 
-import { projectStatCard } from '@/constants/animations/dashboard/project-stat-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 import { formatMinutes } from '@/utils/format-minutes'
 
@@ -20,7 +20,7 @@ export function ProjectStatCard({ projectStat }: Props) {
 		<m.div
 			initial="initial"
 			whileHover="hover"
-			variants={projectStatCard.card}
+			variants={cardAnimations.basic}
 			className="project-stats-card"
 		>
 			{/* Background color */}
@@ -36,13 +36,13 @@ export function ProjectStatCard({ projectStat }: Props) {
 			<div className="flex items-center justify-between relative z-10">
 				<div className="flex flex-col">
 					<m.span
-						variants={projectStatCard.content}
+						variants={cardAnimations.subtle}
 						className="text-3xl font-bold mb-2 text-gray-900 dark:text-white"
 					>
 						{projectStat.id === 3 ? formatMinutes(projectStat.value) : projectStat.value}
 					</m.span>
 					<m.span
-						variants={projectStatCard.content}
+						variants={cardAnimations.subtle}
 						className="text-sm text-gray-700 dark:text-gray-300 font-medium"
 					>
 						{projectStat.label}

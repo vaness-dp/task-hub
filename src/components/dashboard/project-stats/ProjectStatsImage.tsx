@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { InnerGlow } from '@/ui/glass/InnerGlow'
 
-import { projectStatCard } from '@/constants/animations/dashboard/project-stat-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 import type { IProjectStat } from './projects-stats.types'
 
@@ -16,7 +16,7 @@ export function ProjectStatsImage({ projectStat }: Props) {
 	return (
 		<div className="flex-shrink-0 ml-4">
 			<m.div
-				variants={projectStatCard.icon}
+				variants={cardAnimations.intense}
 				className="image-inner-glow"
 			>
 				<InnerGlow className="rounded-2xl" />

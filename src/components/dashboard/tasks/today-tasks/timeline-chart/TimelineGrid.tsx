@@ -1,5 +1,6 @@
 'use client'
 
+import cn from 'clsx'
 import { useRef, useState } from 'react'
 
 import type { ITodayTask } from '@/types/task.types'
@@ -20,7 +21,6 @@ export const TimelineGrid = ({ tasks }: Props) => {
 		return tasks[slotIndex] || null
 	}
 
-	// Функция для расчета позиции карточки
 	const getCardPosition = (index: number) => {
 		const totalSlots = TIME_SLOTS.length
 
@@ -42,9 +42,8 @@ export const TimelineGrid = ({ tasks }: Props) => {
 			ref={containerRef}
 			className="relative w-full h-full"
 		>
-			{/* Временные метки */}
 			<div className="flex text-sm text-gray-600 dark:text-gray-400 px-4 mb-6">
-				{TIME_SLOTS.map((time, index) => (
+				{TIME_SLOTS.map(time => (
 					<div
 						key={time}
 						className="flex-1 text-center"
@@ -54,7 +53,6 @@ export const TimelineGrid = ({ tasks }: Props) => {
 				))}
 			</div>
 
-			{/* Контейнер для линий */}
 			<div
 				className="relative w-full"
 				style={{ height: 'calc(100% - 60px)', minHeight: '300px' }}
@@ -69,17 +67,14 @@ export const TimelineGrid = ({ tasks }: Props) => {
 								key={index}
 								className="flex-1 relative h-full"
 							>
-								{/* Вертикальная линия - точно по центру */}
 								<div className="absolute inset-0 flex justify-center">
 									<div
-										className={`
-                      w-0.5 h-full rounded-full transition-all duration-200
-                      ${
-												hasTask
-													? 'bg-primary/30 hover:w-1 hover:bg-primary/60'
-													: 'bg-gray-200 dark:bg-gray-600'
-											}
-                    `}
+										className={cn(
+											'w-0.5 h-full rounded-full transition-all duration-200',
+											hasTask
+												? 'bg-primary/30 hover:w-1 hover:bg-primary/60'
+												: 'bg-gray-200 dark:bg-gray-600'
+										)}
 									>
 										{hasTask && (
 											<div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-transparent rounded-full opacity-0 hover:opacity-100 transition-opacity duration-200" />
@@ -87,12 +82,10 @@ export const TimelineGrid = ({ tasks }: Props) => {
 									</div>
 								</div>
 
-								{/* Расширенная интерактивная область - НАД линией */}
 								<div
 									className="absolute inset-0 z-10"
 									style={{
 										cursor: hasTask ? 'pointer' : 'default',
-										// Расширяем область взаимодействия без сдвига линии
 										left: '-20px',
 										right: '-20px'
 									}}
@@ -100,7 +93,6 @@ export const TimelineGrid = ({ tasks }: Props) => {
 									onMouseLeave={() => setHoveredSlot(null)}
 								/>
 
-								{/* Карточка задачи с умным позиционированием */}
 								{hoveredSlot === index && task && (
 									<div
 										className="absolute z-50 pointer-events-none"

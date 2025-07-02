@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 
 import { mockChartData } from '@/components/dashboard/projects-statistic/projects-statistic.data'

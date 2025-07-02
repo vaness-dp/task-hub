@@ -1,4 +1,4 @@
-import { chartGradients } from '@/utils/chart.config'
+import { chartGradients } from '@/config/chart.config'
 
 export function ChartGradients() {
 	return (

@@ -10,7 +10,7 @@ import {
 	YAxis
 } from 'recharts'
 
-import { chartColors, chartMargins } from '@/utils/chart.config'
+import { chartColors, chartMargins } from '@/config/chart.config'
 
 import { ChartGradients } from './ChartGradients'
 import { CustomTooltip } from './CustomTooltip'

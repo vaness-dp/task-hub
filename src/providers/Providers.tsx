@@ -13,7 +13,10 @@ export function Providers({ children }: { children: ReactNode }) {
 				defaultOptions: {
 					queries: {
 						retry: 1,
-						refetchOnWindowFocus: false
+						refetchOnWindowFocus: false,
+						refetchOnMount: false,
+						refetchInterval: false,
+						networkMode: 'online'
 					},
 					mutations: {
 						retry: 1
@@ -32,7 +35,17 @@ export function Providers({ children }: { children: ReactNode }) {
 				>
 					{children}
 				</ThemeProvider>
-				<Toaster />
+				<Toaster
+					position="top-right"
+					toastOptions={{
+						duration: 4000,
+						style: {
+							background: '#262626',
+							color: '#fff',
+							border: '1px solid #404040'
+						}
+					}}
+				/>
 			</LazyMotion>
 		</QueryClientProvider>
 	)

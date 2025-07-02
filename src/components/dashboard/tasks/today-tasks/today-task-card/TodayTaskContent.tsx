@@ -1,6 +1,6 @@
 import * as m from 'framer-motion/m'
 
-import { taskCard } from '@/constants/animations/dashboard/task-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 interface Props {
 	title: string
@@ -11,7 +11,7 @@ export function TodayTaskContent({ title, timeRange }: Props) {
 	return (
 		<div className="text-white min-w-0 flex-1">
 			<m.h3
-				variants={taskCard.title}
+				variants={cardAnimations.subtle}
 				className="text-lg font-semibold leading-tight drop-shadow-sm mb-2"
 			>
 				{title}

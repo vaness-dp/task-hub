@@ -3,7 +3,7 @@ import * as m from 'framer-motion/m'
 import type { LucideIcon } from 'lucide-react'
 import type { ButtonHTMLAttributes } from 'react'
 
-import { taskCard } from '@/constants/animations/dashboard/task-card.animations'
+import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	icon: LucideIcon
@@ -33,7 +33,7 @@ export function ActionButton({
 	return (
 		<m.button
 			whileHover={disabled ? undefined : 'hover'}
-			variants={taskCard.action}
+			variants={cardAnimations.basic}
 			onClick={onClick}
 			disabled={disabled}
 			className={cn(baseStyles, variants[variant], className)}

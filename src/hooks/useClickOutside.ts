@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export const useClickOutside = (initialOpen = false) => {
+export function useClickOutside(initialOpen = false) {
 	const [isOpen, setIsOpen] = useState(initialOpen)
 	const ref = useRef<HTMLDivElement>(null)
 
