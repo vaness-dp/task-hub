@@ -24,11 +24,22 @@ export function LastTasks({ tasks }: Props) {
 
 	const { direction, sortedTasks, toggleSort } = useLastTasksSort(filteredTasks)
 
-	const { currentIndex, totalPages, canSlideLeft, canSlideRight, handleSlide } = useLastTasksSlider(
-		{
+	const { currentIndex, totalPages, canSlideLeft, canSlideRight, handleSlide, resetToFirstPage } =
+		useLastTasksSlider({
 			tasks: sortedTasks
-		}
-	)
+		})
+
+	// Handle filter change with reset to first page
+	const handleFilterChange = (value: TTaskFilterValue) => {
+		setActiveFilter(value)
+		resetToFirstPage()
+	}
+
+	// Handle sort toggle with reset to first page
+	const handleSortToggle = () => {
+		toggleSort()
+		resetToFirstPage()
+	}
 
 	return (
 		<div className="space-y-6">
@@ -50,11 +61,11 @@ export function LastTasks({ tasks }: Props) {
 					<LastTasksFilter
 						tasks={tasks}
 						activeFilter={activeFilter}
-						onChange={setActiveFilter}
+						onChange={handleFilterChange}
 					/>
 					<LastTasksSort
 						direction={direction}
-						onToggle={toggleSort}
+						onToggle={handleSortToggle}
 						value={activeFilter}
 						isActive={activeFilter !== 'all'}
 					/>

@@ -5,7 +5,7 @@ import * as m from 'framer-motion/m'
 import { GradientOverlay } from '@/ui/glass/GradientOverlay'
 import { InnerGlow } from '@/ui/glass/InnerGlow'
 
-import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
+import { lastTasksCardAnimations } from '@/constants/animations/dashboard/last-tasks-card.animations'
 
 import type { ITask } from '@/types/task.types'
 
@@ -24,7 +24,7 @@ export function TaskCard({ task }: Props) {
 		<m.div
 			initial="initial"
 			whileHover="hover"
-			variants={cardAnimations.basic}
+			variants={lastTasksCardAnimations.basic}
 			className="last-tasks-card"
 		>
 			<GradientOverlay />

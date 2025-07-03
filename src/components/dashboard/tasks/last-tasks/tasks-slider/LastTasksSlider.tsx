@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion'
 import * as m from 'framer-motion/m'
 
-import { cardAnimations } from '@/constants/animations/dashboard/project-stat-card.animations'
+import { lastTasksCardAnimations } from '@/constants/animations/dashboard/last-tasks-card.animations'
 
 import type { ITask } from '@/types/task.types'
 
@@ -25,7 +25,7 @@ export function LastTasksSlider({ tasks, currentIndex, activeFilter = 'all' }: P
 			>
 				<m.div
 					key={`${activeFilter}-${currentIndex}`}
-					variants={cardAnimations.basic}
+					variants={lastTasksCardAnimations.basic}
 					initial="initial"
 					animate="animate"
 					exit="exit"
@@ -35,7 +35,7 @@ export function LastTasksSlider({ tasks, currentIndex, activeFilter = 'all' }: P
 						<m.div
 							key={task.id}
 							custom={index}
-							variants={cardAnimations.subtle}
+							variants={lastTasksCardAnimations.subtle}
 							initial="initial"
 							animate="animate"
 							exit="exit"

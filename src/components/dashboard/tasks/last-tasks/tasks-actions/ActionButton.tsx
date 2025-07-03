@@ -33,7 +33,7 @@ export function ActionButton({
 	return (
 		<m.button
 			whileHover={disabled ? undefined : 'hover'}
-			variants={cardAnimations.basic}
+			variants={cardAnimations.subtle}
 			onClick={onClick}
 			disabled={disabled}
 			className={cn(baseStyles, variants[variant], className)}
