@@ -4,10 +4,11 @@ import { Chat } from '@/components/dashboard/chat/Chat'
 import { Header } from '@/components/dashboard/header/Header'
 import { ProjectStats } from '@/components/dashboard/project-stats/ProjectStats'
 import { ProjectsStatistic } from '@/components/dashboard/projects-statistic/ProjectsStatistic'
-import { LastTasks } from '@/components/dashboard/tasks/last-tasks/LastTasks'
+import { LastTasks } from '@/components/dashboard/tasks/last-tasks/container/LastTasks'
 import { TodayTasks } from '@/components/dashboard/tasks/today-tasks/TodayTasks'
+import { MOCK_TODAY_TASKS } from '@/components/dashboard/tasks/today-tasks/today-tasks.data'
 
-import { MOCK_LAST_TASKS, MOCK_TODAY_TASKS } from '@/data'
+import { MOCK_LAST_TASKS } from '@/data/last-tasks.data'
 
 export function Dashboard() {
 	return (

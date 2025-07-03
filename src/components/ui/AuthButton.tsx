@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
+import { cn } from '@/utils/styles'
+
 import { InnerGlow } from './glass/InnerGlow'
 
 interface Props extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
@@ -29,7 +31,7 @@ export function AuthButton({
 			'backdrop-blur-xl bg-white/10 dark:bg-white/5 border border-white/30 dark:border-white/20 text-gray-900 dark:text-white hover:bg-white/20 dark:hover:bg-white/10 shadow-lg hover:shadow-xl'
 	}
 
-	const className = `${baseClasses} ${variantClasses[variant]} ${customClassName || ''}`
+	const className = cn(baseClasses, variantClasses[variant], customClassName)
 
 	const ButtonContent = ({ children }: { children: ReactNode }) => (
 		<>

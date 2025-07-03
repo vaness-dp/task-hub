@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { SettingsCard } from '../../common/SettingsCard'
 
 import { ThemeOptionCard } from './ThemeOptionCard'
-import { THEME_OPTIONS } from '@/data'
+import { THEME_OPTIONS } from '@/data/settings.data'
 
 export function ThemeSection() {
 	const [selectedTheme, setSelectedTheme] = useState('system')

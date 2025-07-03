@@ -1,8 +1,9 @@
 'use client'
 
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
-import cn from 'clsx'
 import { useTheme } from 'next-themes'
+
+import { cn } from '@/utils/styles'
 
 import { InnerGlow } from './glass/InnerGlow'
 

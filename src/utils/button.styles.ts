@@ -1,7 +1,7 @@
 import cn from 'clsx'
 
-import { getFilterStyle } from '@/components/dashboard/tasks/last-tasks/task-filter/task-filter.styles'
-import type { TTaskFilterValue } from '@/components/dashboard/tasks/last-tasks/task-filter/task-filter.types'
+import { getFilterStyle } from '@/components/dashboard/tasks/last-tasks/controls/task-filter/task-filter.styles'
+import type { TTaskFilterValue } from '@/components/dashboard/tasks/last-tasks/controls/task-filter/task-filter.types'
 
 export const getButtonStyles = (isActive: boolean, value: TTaskFilterValue) =>
 	cn(

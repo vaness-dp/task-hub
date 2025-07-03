@@ -10,7 +10,7 @@ import { useSettingsStore } from '@/store/useSettingsStore'
 
 import { cn } from '@/utils/styles'
 
-import { SETTINGS_NAVIGATION } from '@/data'
+import { SETTINGS_NAVIGATION } from '@/data/settings.data'
 
 export function SettingsNavigation() {
 	const { activeTab, setActiveTab } = useSettingsStore()

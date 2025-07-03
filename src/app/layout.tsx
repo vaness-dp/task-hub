@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { SUSE } from 'next/font/google'
 
-import { SITE_DESCRIPTION, SITE_NAME } from '@/constants'
-import { Providers } from '@/providers'
+import { Providers } from '@/providers/Providers'
+
+import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/constants'
 
 import './globals.css'
 

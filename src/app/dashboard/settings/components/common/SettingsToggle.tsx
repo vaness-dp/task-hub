@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { Icon } from '@/components/ui/Icon'
 
-import { cn } from '@/utils'
+import { cn } from '@/utils/styles'
 
 interface Props {
 	icon: LucideIcon

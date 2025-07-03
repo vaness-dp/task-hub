@@ -9,7 +9,7 @@ export interface NavigationItem {
 	description: string
 }
 
-export interface SettingsStore {
+export interface ISettingsStore {
 	activeTab: SettingsTab
 	setActiveTab: (tab: SettingsTab) => void
 }

@@ -7,7 +7,7 @@ import { settingsCardAnimations } from '@/constants/animations/settings/settings
 
 import { cn } from '@/utils/styles'
 
-import type { BaseProps } from '@/types'
+import type { BaseProps } from '@/types/common'
 
 interface Props extends BaseProps {
 	title: string

@@ -43,7 +43,7 @@ export function ApiAccessSection() {
 					</div>
 
 					<div className="flex items-center justify-between p-3 backdrop-blur-xl bg-white/60 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-2xl">
-						<div className="flex-1">
+						<div className="flex-1 mr-3">
 							<div className="flex items-center justify-between">
 								<div>
 									<h4 className="font-medium text-gray-900 dark:text-white">Development API Key</h4>

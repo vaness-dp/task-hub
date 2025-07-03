@@ -1,7 +1,7 @@
 import { SettingsCard } from '../common/SettingsCard'
 import { SettingsToggle } from '../common/SettingsToggle'
 
-import { EMAIL_NOTIFICATIONS, PUSH_NOTIFICATIONS } from '@/data'
+import { EMAIL_NOTIFICATIONS, PUSH_NOTIFICATIONS } from '@/data/settings.data'
 
 export function NotificationSettings() {
 	return (

@@ -1,6 +1,6 @@
 import { Bell } from 'lucide-react'
 
-import { Icon } from '@/components/ui'
+import { Icon } from '@/ui/Icon'
 
 export function Notifications() {
 	return (

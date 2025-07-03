@@ -3,12 +3,13 @@ import * as m from 'framer-motion/m'
 
 import { settingsContentAnimations } from '@/constants/animations/settings/settings.animations'
 
+import type { SettingsTab } from '@/types/settings.types'
+
 import { AppearanceSettings } from './tabs/AppearanceSettings'
 import { IntegrationSettings } from './tabs/IntegrationSettings'
 import { NotificationSettings } from './tabs/NotificationSettings'
 import { ProfileSettings } from './tabs/ProfileSettings'
 import { SecuritySettings } from './tabs/SecuritySettings'
-import type { SettingsTab } from '@/types'
 
 interface Props {
 	activeTab: SettingsTab

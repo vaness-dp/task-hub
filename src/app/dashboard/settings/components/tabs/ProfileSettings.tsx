@@ -1,4 +1,6 @@
-import { AvatarSection, BioSection, PersonalInfoSection } from './profile'
+import { AvatarSection } from './profile/AvatarSection'
+import { BioSection } from './profile/BioSection'
+import { PersonalInfoSection } from './profile/PersonalInfoSection'
 
 export function ProfileSettings() {
 	return (

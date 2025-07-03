@@ -4,6 +4,7 @@ export interface ITask {
 	subtitle: string
 	icon: string
 	dueDate: string
+	createdAt?: string
 	team: string[]
 	status: 'completed' | 'in-progress' | 'review' | 'todo'
 	comments: number

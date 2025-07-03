@@ -5,7 +5,7 @@ import { Pages } from '@/config/pages.config'
 
 const PUBLIC_ROUTES = [Pages.LOGIN, Pages.REGISTER, Pages.AUTH] as const
 
-const AUTH_ONLY_ROUTES = [Pages.LOGIN, Pages.REGISTER] as const
+const AUTH_ONLY_ROUTES = [Pages.LOGIN, Pages.REGISTER, Pages.AUTH] as const
 
 export async function updateSession(request: NextRequest) {
 	let supabaseResponse = NextResponse.next({
@@ -21,7 +21,7 @@ export async function updateSession(request: NextRequest) {
 					return request.cookies.getAll()
 				},
 				setAll(cookiesToSet) {
-					cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value))
+					cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
 					supabaseResponse = NextResponse.next({
 						request
 					})

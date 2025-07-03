@@ -5,7 +5,7 @@ import { Icon } from '@/components/ui/Icon'
 
 import { cn } from '@/utils/styles'
 
-import type { WithChildren } from '@/types'
+import type { WithChildren } from '@/types/common'
 
 interface Props extends WithChildren<ButtonHTMLAttributes<HTMLButtonElement>> {
 	variant?: 'primary' | 'secondary' | 'danger'

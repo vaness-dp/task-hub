@@ -1,5 +1,6 @@
-import type { ComponentSize, IconComponent, WithClassName } from '@/types'
-import { getIconStyles } from '@/utils'
+import { getIconStyles } from '@/utils/styles'
+
+import type { ComponentSize, IconComponent, WithClassName } from '@/types/common'
 
 interface Props extends WithClassName {
 	icon: IconComponent

@@ -1,4 +1,6 @@
-import { AccentColorSection, DisplayOptionsSection, ThemeSection } from './appearance'
+import { AccentColorSection } from './appearance/AccentColorSection'
+import { DisplayOptionsSection } from './appearance/DisplayOptionsSection'
+import { ThemeSection } from './appearance/ThemeSection'
 
 export function AppearanceSettings() {
 	return (

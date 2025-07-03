@@ -1,7 +1,7 @@
 import { SettingsCard } from '../../common/SettingsCard'
 
 import { IntegrationServiceCard } from './IntegrationServiceCard'
-import { INTEGRATION_SERVICES } from '@/data'
+import { INTEGRATION_SERVICES } from '@/data/settings.data'
 
 export function ConnectedAppsSection() {
 	const handleToggleConnection = (serviceName: string) => {

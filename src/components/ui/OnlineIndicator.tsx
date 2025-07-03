@@ -1,6 +1,6 @@
 import cn from 'clsx'
 
-import type { WithClassName } from '@/types'
+import type { WithClassName } from '@/types/common'
 
 interface Props extends WithClassName {
 	isSmall?: boolean

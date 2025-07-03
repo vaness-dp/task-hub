@@ -21,7 +21,7 @@ import type {
 	NavigationItem,
 	NotificationPreference,
 	ThemeOption
-} from '@/types'
+} from '@/types/settings.types'
 
 /**
  * Navigation items for settings sidebar

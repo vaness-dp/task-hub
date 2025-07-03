@@ -1,6 +1,6 @@
 import cn from 'clsx'
 
-import type { BaseProps } from '@/types'
+import type { BaseProps } from '@/types/common'
 
 export function Heading({ children, className = '' }: BaseProps) {
 	return (

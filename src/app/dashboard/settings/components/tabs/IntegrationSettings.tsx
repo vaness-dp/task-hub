@@ -1,4 +1,6 @@
-import { ApiAccessSection, ConnectedAppsSection, WebhooksSection } from './integration'
+import { ApiAccessSection } from './integration/ApiAccessSection'
+import { ConnectedAppsSection } from './integration/ConnectedAppsSection'
+import { WebhooksSection } from './integration/WebhooksSection'
 
 export function IntegrationSettings() {
 	return (

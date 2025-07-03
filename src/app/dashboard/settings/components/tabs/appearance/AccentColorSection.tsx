@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { SettingsCard } from '../../common/SettingsCard'
 
 import { AccentColorCard } from './AccentColorCard'
-import { ACCENT_COLORS } from '@/data'
+import { ACCENT_COLORS } from '@/data/settings.data'
 
 export function AccentColorSection() {
 	const [selectedColor, setSelectedColor] = useState('blue')
