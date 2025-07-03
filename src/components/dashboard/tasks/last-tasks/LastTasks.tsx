@@ -1,6 +1,6 @@
 import type { ITask } from '@/types/task.types'
 
-import { LastTasksContainer } from './LastTasksContainer'
+import { LastTasksContainer } from './container/LastTasksContainer'
 
 interface Props {
 	tasks: ITask[]
