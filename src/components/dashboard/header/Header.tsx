@@ -15,12 +15,27 @@ const DynamicThemeToggle = dynamic(
 	}
 )
 
-export function Header() {
+interface Props {
+	isChatOpen: boolean
+}
+
+export function Header({ isChatOpen }: Props) {
 	return (
-		<header className="relative flex items-center justify-between mb-8 pb-6 border-b backdrop-blur-xl border-gray-200 dark:border-white/10">
+		<header
+			className="relative flex items-center justify-between mb-8 pb-6 border-b backdrop-blur-xl border-gray-200 dark:border-white/10"
+			style={{
+				transition: 'padding 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+			}}
+		>
 			<Heading>Dashboard</Heading>
 
-			<div className="flex items-center space-x-4">
+			<div
+				className="flex items-center space-x-4"
+				style={{
+					marginRight: isChatOpen ? '0' : '4rem',
+					transition: 'margin 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+				}}
+			>
 				<SearchField
 					onChange={() => {}}
 					value=""

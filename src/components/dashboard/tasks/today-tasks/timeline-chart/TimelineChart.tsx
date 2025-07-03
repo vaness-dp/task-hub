@@ -1,5 +1,3 @@
-'use client'
-
 import type { ITodayTask } from '@/types/task.types'
 
 import { TimelineGrid } from './TimelineGrid'

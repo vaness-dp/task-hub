@@ -15,14 +15,14 @@ interface Props {
 
 export function TodayTasks({ tasks }: Props) {
 	return (
-		<div className="backdrop-blur-xl bg-white/60 dark:bg-white/5 rounded-3xl p-8 border border-white/30 dark:border-white/10 relative overflow-hidden h-130">
+		<div className="backdrop-blur-xl bg-white/60 dark:bg-white/5 rounded-3xl p-8 border border-white/30 dark:border-white/10 relative h-130">
 			<GradientOverlay />
 			<InnerGlow />
 
 			<div className="relative z-10 h-full flex flex-col">
 				<TodayTasksHeader teamMembers={TEAM_MEMBERS_DATA} />
 
-				<div className="flex-1 mt-8">
+				<div className="flex-1 mt-8 relative z-20">
 					<TimelineChart tasks={tasks} />
 				</div>
 			</div>
