@@ -15,13 +15,7 @@ export const buttonSizes = {
 	lg: 'px-6 py-3 text-base'
 } as const
 
-/**
- * Generates button styles based on variant, size and custom className
- * @param variant - Button visual variant
- * @param size - Button size
- * @param className - Additional CSS classes
- * @returns Combined class string
- */
+
 export const getButtonVariantStyles = (
 	variant: ButtonVariant = 'primary',
 	size: ButtonSize = 'md',
@@ -42,12 +36,7 @@ export const iconSizes = {
 	xl: 'w-6 h-6'
 } as const
 
-/**
- * Generates icon styles with size and optional className
- * @param size - Icon size
- * @param className - Additional CSS classes
- * @returns Combined class string
- */
+
 export const getIconStyles = (size: keyof typeof iconSizes = 'md', className?: string) => {
 	return cn(iconSizes[size], 'text-neutral-600 dark:text-neutral-300', className)
 }
